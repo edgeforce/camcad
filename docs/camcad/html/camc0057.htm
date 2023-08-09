@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#; ScanCAD.MAC</P>
+
+<P>.STARTDEF Template</P>
+
+<P>;.UNITS=inch</P>
+
+<P>.UNITS=MIL</P>
+
+<P>;.UNITS=mm</P>
+
+<P>;</P>
+
+<P>.TEXTDELIMETER   ()</P>
+
+<P>.IGNORE ""            // inside bracket</P>
+
+<P>.WORDDELIMETER "| "  // inside bracket</P>
+
+<P>;</P>
+
+<P>.FORM_ROUND      c</P>
+
+<P>.FORM_SQUARE     s</P>
+
+<P>.FORM_RECT       r</P>
+
+<P>.FORM_OBLONG     o</P>
+
+<P>; all different possibilities.</P>
+
+<P>.SCANLINE .SKIPWORD .DCODE .MUST_FORM_ROUND .XSIZE</P>
+
+<P>.SCANLINE .SKIPWORD .DCODE .MUST_FORM_SQUARE .XSIZE</P>
+
+<P>.SCANLINE .SKIPWORD .DCODE .MUST_FORM_RECT .XSIZE .SKIPWORD .YSIZE</P>
+
+<P>.SCANLINE .SKIPWORD .DCODE .MUST_FORM_OBLONG .XSIZE .SKIPWORD .YSIZE</P>
+
+<P>.ENDDEF </P>
+
+<P>{button Copy to clipboard and launch Notepad.  [CTRL-V] in notepad to paste.,CT():EF(`notepad.exe',`',1)}</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,113 @@
+;
+; ACCEL.IN
+;
+; This marked the primary BOARDOUTLINE
+.BOARDOUTLINE	"BOARD"
+;
+;This will use the original Pattern name SOT-23 vs SOT-23_1, SOT-23_2
+; The first pattern is used as the original.
+.USE_ORIGINAL_PATTERN  y
+;
+; This will use the compdef section with it's attachedpattern
+; geometry, which also will allow the use of PinNames.
+; This switch requires to use_original_pattern.
+.USECOMPDEF	y
+;
+; This is the primary component outline
+; (upto 10 outline layers are allowed).
+.COMPOUTLINE	"TOP SILK"
+.COMPOUTLINE	"TOP ASSY"
+;
+; Accel Attribute name for height in Accel or conastrain Units
+.HEIGHTATTR     ComponentHeight  
+;
+.MIRRORLAYER	"PAD_1"		"PAD_2"
+.MIRRORLAYER    "Bot Mask"      "Top Mask"
+.MIRRORLAYER    "Bot Paste"     "Top Paste"
+.MIRRORLAYER    "Bot Silk"      "Top Silk"
+.MIRRORLAYER    "Bot Assy"      "Top Assy"
+;
+;---------------------------------------------------------------------------
+;SMD Rules
+; 
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+; Layer types
+;	"UNKNOWN GRAPHIC",
+;	"SIGNAL TOP",		// component layer
+;	"SIGNAL BOTTOM",	// solder layer
+;	"SIGNAL INNER",	        // inner layer - number is from stackup
+;	"SIGNAL ALL",		// all layer 
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",		// pad top layer
+;	"PAD BOTTOM",		
+;	"PAD INNER",		
+;	"PAD ALL",		
+;	"PAD THERMAL",		
+;	"PASTE TOP",
+;	"PASTE BOTTOM",
+;	"SOLDERMASK TOP",
+;	"SOLDERMASK BOTTOM",
+;	"SILKSCREEN TOP",
+;	"SILKSCREEN BOTTOM",
+;	"POWER NEGATIVE",	// power layer
+;	"POWER POSITIVE",	// power				
+;	"SPLIT PLANE",		// split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known exect it is a signal layer
+;	"SOLDERMASK ALL",
+;	"PASTEMASK ALL",
+;	"REDLINE",
+;	"DRILL",
+;	"GENERIC TOP",		// this is for top and bottom view
+;	"GENERIC BOTTOM",	// same
+;	"GENERIC ALL",
+;	"BOARD OUTLINE",
+;
+;
+;
+.LAYERATTR	"PAD_1"		"PAD TOP"
+.LAYERATTR	"PAD_2"		"PAD BOTTOM"
+.LAYERATTR	"BOARD" 	"BOARD OUTLINE"   
+.LAYERATTR	"TOP MASK" 	"SOLDERMASK TOP"   
+.LAYERATTR	"BOT MASK" 	"SOLDERMASK BOTTOM"   
+.LAYERATTR	"TOP SILK" 	"SILKSCREEN TOP"   
+.LAYERATTR	"BOT SILK" 	"SILKSCREEN BOTTOM"   
+.LAYERATTR	"TOP PASTE" 	"PASTE TOP"   
+.LAYERATTR	"BOT PASTE" 	"PASTE BOTTOM" 
+.LAYERATTR	"TOP ASSY" 	"GENERIC TOP"   
+.LAYERATTR	"BOT ASSY" 	"GENERIC BOTTOM"   
+.LAYERATTR	"DRILL"		"DRILL"
+.LAYERATTR	"DRILLHOLE"    	"DRILL"
+.LAYERATTR	"TOP"		"SIGNAL TOP"
+.LAYERATTR	"BOTTOM"	"SIGNAL BOTTOM"
+.LAYERATTR	"MID 1"		"SIGNAL INNER"
+.LAYERATTR	"MID 2"		"SIGNAL INNER"
+.LAYERATTR	"MID 3"		"SIGNAL INNER"
+.LAYERATTR	"MID 4"		"SIGNAL INNER"
+.LAYERATTR	"MID 5"		"SIGNAL INNER"
+.LAYERATTR	"MID 6"		"SIGNAL INNER"
+.LAYERATTR	"MID 7"		"SIGNAL INNER"
+.LAYERATTR	"MID 8"		"SIGNAL INNER"
+.LAYERATTR	"MID 9"		"SIGNAL INNER"
+.LAYERATTR	"MID 10"	"SIGNAL INNER"
+.LAYERATTR	"MID 11"	"SIGNAL INNER"
+.LAYERATTR	"MID 12"	"SIGNAL INNER"
+;
+; .ATTRIBMAP
+; Attribute Accel to CAMCAD 
+.ATTRIBMAP     	"TOLER"		"TOLERANCE"
+;

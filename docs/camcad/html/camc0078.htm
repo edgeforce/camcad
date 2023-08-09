@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Mapping Attributes</H4>
+
+<P>In many cases the attribute names found in the input CAD data are not consistent with the names expected by the HP3070 output processor. To overcome this problem, CAMCAD lets you MAP the attribute keywords to a new name. </P>
+
+<P>The following table describes each attribute that is important to the HP3070 output and how it is applied in the resultant Board and Board_XY files.</P>
+
+<P></P>
+
+<TABLE cols=3 width=580>
+
+<TR VALIGN="top">
+<TD width=34%><B><U>CAMCAD Attribute Keyword</U></B></TD>
+<TD width=29%><B><U>Keyword Definition </U></B></TD>
+<TD width=37%><B><U>HP3070 Keyword &lt;parameter&gt;</U></B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>REFNAME (internal)</TD>
+<TD width=29%>Reference Designator (U25)</TD>
+<TD width=37%>&lt;device&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>DEVICETYPE (internal)</I></TD>
+<TD width=29%><I>Device Description (resistor)</I></TD>
+<TD width=37%><I>&lt;device type&gt;</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>TEST (internal)</TD>
+<TD width=29%>Assigns the Mandatory keyword to the probe location in the Board_XY file.</TD>
+<TD width=37%>MANDATORY</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>SMD (internal)</I></TD>
+<TD width=29%><I>Assigns a component pin to be a treated as a Surface Mount Device</I></TD>
+<TD width=37%><I>Determines probe access </I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>NETNAME (internal)</TD>
+<TD width=29%>Signal Name (+5V)</TD>
+<TD width=37%>&lt;node_id&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><B><U>EXPORT KEYWORDS</U></B></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>MESSAGE</TD>
+<TD width=29%>Failure Message</TD>
+<TD width=37%>&lt;failure message&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>PARTNUMBER</I></TD>
+<TD width=29%><I>Part Number (25-37651)</I></TD>
+<TD width=37%><I>PN&lt;part number&gt;</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>VALUE</TD>
+<TD width=29%>Value (10K)</TD>
+<TD width=37%>&lt;value&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>TOL</I></TD>
+<TD width=29%><I>Tolerance</I></TD>
+<TD width=37%><I>&lt;+tol&gt; &lt;-tol&gt;</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>+TOL</TD>
+<TD width=29%>+ Tolerance</TD>
+<TD width=37%>&lt;+tol&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>-TOL</I></TD>
+<TD width=29%><I>- Tolerance</I></TD>
+<TD width=37%><I>&lt;-tol&gt;</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>HP_TYPE</TD>
+<TD width=29%>Identifies fix or variable for components</TD>
+<TD width=37%>F or V for capacitors, inductors and resistors<BR>
+N or P for transistors and FETs</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>HI-VAL</I></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%><I>&lt;hi-val&gt; for diodes</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>LO-VAL</TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%>&lt;lo-val&gt; for diodes</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>MAX-CURRENT</I></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%><I>&lt;max-current&gt; for fuses</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>HI-BETA</TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%>&lt;hi-beta&gt; for transistors</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>LO-BETA</I></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%><I>&lt;lo-beta&gt; for transistors</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>VOLTAGE</TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%>&lt;voltage&gt; for zener diodes</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>HI-RES</I></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%><I>&lt;hi-res&gt; for FETs</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%>LO-RES</TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%>&lt;lo-res&gt; for FETs</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=34%><I>SERIES-R</I></TD>
+<TD width=29%>&nbsp;</TD>
+<TD width=37%><I>&lt;series-R&gt; for inductors</I></TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>

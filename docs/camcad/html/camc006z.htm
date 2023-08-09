@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#K<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  PADS</H4>
+
+<P>CAMCAD Read/Import Name R-PADS</P>
+
+<P>Full CAD Format NamePADS Power, PADS Perform</P>
+
+<P>Hardware PlatformPC</P>
+
+<P>Operating SystemWindows</P>
+
+<P>Database ClassPADS PCB-2000, PADS Perform:  Pin—Connections must be made in a pin-to-pin manner. “T” connections are created by doubling back onto an existing section of a trace to give the visual appearance of a “T” connection. This class usually has very stringent rules that must be followed for trace routing and via placement.<BR>
+<BR>
+PADS Power:  Net—Connections are allowed to be made in any order and “T” connections are also allowed. Although rules must be followed for trace routing and via placement they are usually very loose, thus allowing the designer much more freedom in the routing process.</P>
+
+<P><B>Importing PADS into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import </B></P>
+
+<P>.ASC ASCII</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>PADS Perform:</P>
+
+<P>From the menu commands, select IN/OUT &gt; Export </P>
+
+<P>ASC PADS Power: </P>
+
+<P>From the menu commands, select File &gt; Export</P>
+
+<P><B>Notes On File Generation</B></P>
+
+<P>When producing a file, you will have many options as to what data to include in the ASCII output. Verify that you are including ALL available information in the .ASC file.</P>
+
+<P><B>Items controlled by the Pads.IN file</B></P>
+
+<P><B>.LOGICDEVICETYPE</B></P>
+
+<P>Establishes mapping between logic types and device types.</P>
+
+<P>•Syntax:  .LOGICDEVICETYPE    [logic type]      [device type] </P>
+
+<P>•Example:   .LOGICDEVICETYPE       CAP     CAPACITOR </P>
+
+<P><B>.FIDUCIALATTR</B></P>
+
+<P><B>.SMDATTR</B></P>
+
+<P>This command allows CAMCAD to recognize the PADS SMD attribute.</P>
+
+<P><B>.NON_ELECTRICAL_PINS</B></P>
+
+<P>Establishes handling for pins which do not have pads on any electrical layer by either leaving them, ignoring them, or converting them to fidicuals.</P>
+
+<P>•Syntax:  .NON_ELECTRICAL_PINS     handling </P>
+
+<P>•Example:  .NON_ELECTRICAL_PINS     ignore </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Sets the default layer to find the Primary Component Outlines.</P>
+
+<P>•Syntax:  .COMPOUTLINE     layer </P>
+
+<P>•Example:  .COMPOUTLINE    DECAL_0 </P>
+
+<P><B>.MIRRORLAYER</B></P>
+
+<P>Establishes default layer mirroring.</P>
+
+<P>•Syntax:  .MIRRORLAYER     [layer to be mirrored]     [mirror layer name] </P>
+
+<P>•Example:  .MIRRORLAYER    DECAL_0            DECAL_MIRROR_0 </P>
+
+<P><B>.UNNAMEDNET</B></P>
+
+<P>Nets which are found to begin with the string given will be renamed to $$__device.pin, where device.pin is the first device pin on that net.</P>
+
+<P>•Syntax:  .UNNAMEDNET       [generic node string] </P>
+
+<P>•Example:  .UNNAMEDNET      $$ </P>
+
+<P><B>.DISPLAYLOG</B></P>
+
+<P>Toggles whether an import log file is displayed after the file is imported</P>
+
+<P>•Syntax:  .DISPLAYLOG      y/n </P>
+
+<P>•Example:   .DISPLAYLOG   y </P>
+
+</BODY>
+</HTML>

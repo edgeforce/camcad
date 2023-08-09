@@ -1,0 +1,36 @@
+;
+; CAMCAD gerber.in
+;
+; new line is a delimeter
+;.BLOCKENDCHAR   "$*\n\a\\\r"
+;.WORDDELIMETER  "$*XYZIJKGDM\\\a\n\r"
+;.NONCHAR	"! \b\t\v"
+;
+; new line is not a delimter
+.BLOCKENDCHAR   "$*"
+.WORDDELIMETER  "$*XYZIJKGDMN"
+.NONCHAR        "\t \b\v!\n"
+;
+; use G4 comment as an attribute for the next draw or flash 
+.ATTACH_G4COMMENT	y
+;
+; Gerbtool comment rules
+; _C = COMMENT
+; _U = USER  key val:
+; _N = NETNAME
+.G4COMMENTTYPE	GERBTOOL
+;
+; this is for a special Gerber from DELPHI.
+; Normally the DCODE starts at 10.
+.LOWESTDCODE	5
+;
+; this is to create a negative layer instead of turing the 
+; elements to negative.
+.CREATE_NEGATIVE_LAYER	 n
+;
+; use LN gerber command to create separate layers.
+.CREATE_NAMED_LAYER	 	y
+; if not file prefix is used, the named layers may be 
+; merged within multiple files.
+.USE_FILEPREFIX_NAMED_LAYER	n
+;

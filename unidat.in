@@ -1,0 +1,41 @@
+;
+; UNIDAT.IN
+;
+; There seems to be confusion about the units in arc.
+; Arc_unit  TENTHDEGREE
+.ARC_UNIT	DEGREE
+;
+; .createlibrary n makes a single component definitions.
+; it only should be set to N in exceptions.
+.CREATELIBRARY		n
+;
+; The component outline is not correct in the Shape section.
+; It seems that sometimes top or bottom is the master. However there is no
+; indication which one is correct.
+; Can only be used with .CREATELIBRARY n
+.IGNORE_SHAPEOUTLINE	y
+;
+;---------------------------------------------------------------------------
+;SMD Rules
+; 
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+; .ATTRIBMAP
+; Attribute Unidat to CAMCAD 
+.ATTRIBMAP	"USER1"		"USER 1"
+.ATTRIBMAP   	"VALUE"		"VAL 1"
+;

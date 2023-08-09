@@ -1,0 +1,35 @@
+;
+; tri-mda.out
+;
+; this allows for multiple functions in one package
+; pin counts are not checked in the takaya writer 
+; 
+; for resistor
+; func_1, func_1, func_2, func_2
+; 
+; for capacitors
+; func_1, func_1, func_2, func_2
+; 
+; for transitors
+; base_, emitter_, collector_
+; 
+; for diodes
+; anode_ , cathode_
+;
+;
+.PINFUNCTION	BASE_1		1
+.PINFUNCTION	EMITTER_1	2
+.PINFUNCTION	COLLECTOR_1	3
+.PINFUNCTION	BASE_2		4
+.PINFUNCTION	EMITTER_2	5
+.PINFUNCTION	COLLECTOR_3	6
+;	
+;
+.PINFUNCTION	ANODE_1		2
+.PINFUNCTION	ANODE_1		A
+;
+.PINFUNCTION	CATHODE_1	K
+.PINFUNCTION	CATHODE_1	1
+;
+;
+; end tri-mda.out

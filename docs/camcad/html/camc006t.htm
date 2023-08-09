@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4><I>$#K</I><IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Accel</H4>
+
+<P>CAMCAD Read/Import NameR-Accel</P>
+
+<P>Full CAD Format NameAccel EDA PCB</P>
+
+<P>Supported VersionsAccel EDA and Tango Pro V. 12 &amp; 13</P>
+
+<P>Hardware PlatformPC</P>
+
+<P>Operating SystemDOS</P>
+
+<P>Database ClassNet: Connections are allowed to be made in any order and “T” connections are also allowed. Although rules must be followed for trace routing and via placement they are usually very loose, thus allowing the designer much more freedom in the routing process.</P>
+
+<P>Board Outline ClassPseudo: Board outlines in this CAD format are comprised of standard line elements. The CAD format does not allow for a real board outline entity.</P>
+
+<P>Component ClassLocal Component: Local component CAD systems are systems where the shape of the component can be changed locally (only for a single instance of the component). Also called Exploded Component Class.</P>
+
+<P><B>Importing Accel into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import</B></P>
+
+<P>.PCB (ASCII)</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>1.  Load CAD data into Accel. </P>
+
+<P>2.  Save the file in ASCII format.</P>
+
+<P><B>Notes On File Generation</B></P>
+
+<P>In order to assure net assigns as copper, run utils | reconnect nets from the Menu Bar before saving the file.</P>
+
+<P>We do not conform to Tango Pro PCB Lite limitations. Only the limitations, as known, of Accel EDA and Tango Pro full versions are considered.</P>
+
+<P><B>Items controlled by the Accel.IN file</B></P>
+
+<P><B>.BOARDOUTLINE</B></P>
+
+<P>Sets the default name of the layer which CAMCAD will define as the Primary Board Outline.</P>
+
+<P>•Syntax:  .BOARDOUTLINE  “layername” </P>
+
+<P>•Example:  .BOARDOUTLINE  “BOARD” </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Sets the default name of the layer which CAMCAD will define as the Primary Component Outline.</P>
+
+<P>•Syntax: .COMPOUTLINE    “layername” </P>
+
+<P>•Example:  .COMPOUTLINE   “TOP SILK” </P>
+
+<P><B>.HEIGHTATTR</B></P>
+
+<P><B>.MIRRORLAYER</B></P>
+
+<P>Sets the default layer mirroring for imported files.</P>
+
+<P>•Syntax: .MIRRORLAYER   “mirrorlayername”  “layertobemirrored” </P>
+
+<P>•Example: .MIRRORLAYER  “Bot Silk”    “Top Silk” </P>
+
+<P><B>.ComponentSMDrule</B></P>
+
+<P>Based on a set of rules. Identify which components should be flagged as SMD in the “technology” section of the .CCM file.</P>
+
+<P>•Syntax:  .ComponentSMDrule    rulenumber </P>
+
+<P>•Example:  .ComponentSMDrule  1 </P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,109 @@
+;
+; Orcad for Windows
+;
+; Orcad changed in Version 7.x that the (w x) is now in database
+; units and not in mils.
+.WIDTH_IN_MIL   n
+;
+; Y means use the original SYM that the local symbol was derived from.
+.USE_DERIVEDSYM	y
+; 
+; Orcad can have multiple Reference Designators per component.
+; Normalize Refdes converts the RefDes to a REFDES_1 / REFDES_2
+; layer and ignores multiple RefDes entries.
+.NORMALIZE_REFDES	y
+;
+; Heighunit. IN MI MM TN
+; only 2 chars are important
+.HEIGHUNIT			mm	
+;
+;---------------------------------------------------------------------------
+;SMD Rules
+; 
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+;
+; Layer types
+;	"UNKNOWN GRAPHIC",
+;	"SIGNAL TOP",		// component layer
+;	"SIGNAL BOTTOM",	// solder layer
+;	"SIGNAL INNER",	        // inner layer - number is from stackup
+;	"SIGNAL ALL",		// all layer 
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",		// pad top layer
+;	"PAD BOTTOM",		
+;	"PAD INNER",		
+;	"PAD ALL",		
+;	"PAD THERMAL",		
+;	"PASTE TOP",
+;	"PASTE BOTTOM",
+;	"SOLDERMASK TOP",
+;	"SOLDERMASK BOTTOM",
+;	"SILKSCREEN TOP",
+;	"SILKSCREEN BOTTOM",
+;	"POWER NEGATIVE",	// power layer
+;	"POWER POSITIVE",	// power				
+;	"SPLIT PLANE",		// split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known exect it is a signal layer
+;	"SOLDERMASK ALL",
+;	"PASTEMASK ALL",
+;	"REDLINE",
+;	"DRILL"
+;
+; this uses the orcad nickname (not the layername). The nickname is the second name
+; in the layer table
+.LAYERATTR      TOP             "SIGNAL TOP"
+.LAYERATTR      BOT         	"SIGNAL BOTTOM"
+.LAYERATTR	GND		"POWER NEGATIVE"
+.LAYERATTR	PWR		"POWER NEGATIVE"
+.LAYERATTR	IN1		"SIGNAL INNER"
+.LAYERATTR	IN2		"SIGNAL INNER"
+.LAYERATTR	IN3		"SIGNAL INNER"
+.LAYERATTR	IN4		"SIGNAL INNER"
+.LAYERATTR	IN5		"SIGNAL INNER"
+.LAYERATTR	IN6		"SIGNAL INNER"
+.LAYERATTR	IN7		"SIGNAL INNER"
+.LAYERATTR	IN8		"SIGNAL INNER"
+.LAYERATTR	IN9		"SIGNAL INNER"
+.LAYERATTR	I10		"SIGNAL INNER"
+.LAYERATTR	I11		"SIGNAL INNER"
+.LAYERATTR	I12		"SIGNAL INNER"
+.LAYERATTR	IN1		"SIGNAL INNER"
+.LAYERATTR	SMT		"SOLDERMASK TOP"
+.LAYERATTR	SMTOP		"SOLDERMASK TOP"
+.LAYERATTR	SMB		"SOLDERMASK BOTTOM"
+.LAYERATTR	SMBOT		"SOLDERMASK BOTTOM"
+.LAYERATTR	SPT		"PASTE TOP"
+.LAYERATTR	SPB		"PASTE BOTTOM"
+.LAYERATTR	SPTOP		"PASTE TOP"
+.LAYERATTR	SPBOT		"PASTE BOTTOM"
+.LAYERATTR	SST		"SILKSCREEN TOP"
+.LAYERATTR	SSB		"SILKSCREEN BOTTOM"
+.LAYERATTR	SSTOP		"SILKSCREEN TOP"
+.LAYERATTR	SSBOT		"SILKSCREEN BOTTOM"
+;.LAYERATTR	AST		
+;.LAYERATTR	ASB
+;.LAYERATTR	ASYTOP		
+;.LAYERATTR	ASYBOT
+.LAYERATTR	DRD    		"DRILL"
+.LAYERATTR	DRL		"DRILL"
+;.LAYERATTR	FAB
+;.LAYERATTR	NOT
+;
+.ATTRIBMAP	4		"PARTNUM"
+.ATTRIBMAP	5		"PARTSHAPE"
+; end

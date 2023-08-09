@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Mentor Neutral</H4>
+
+<P>CAMCAD Read/Import NameR-MENB</P>
+
+<P>Full CAD Format NameMentor Neutral PCB</P>
+
+<P>Supported VersionsV.8.x</P>
+
+<P>Hardware PlatformSUN, HP</P>
+
+<P>Operating SystemUNIX</P>
+
+<P>Database ClassPin: Connections must be made in a pin-to-pin manner. “T” connections are created by doubling back onto an existing section of a trace to give the visual appearance of a “T” connection. This class usually has very stringent rules that must be followed for trace routing and via placement.</P>
+
+<P>Board Outline ClassReal: Board outlines in this CAD format are true board outline entities.  CAMCAD supports true board outlines.</P>
+
+<P>Component ClassLibrary: Library driven CAD systems have a component library section within the CAD data which defines all components.</P>
+
+<P><B>Importing Mentor Neutral into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import </B></P>
+
+<P>.NEU (ASCII)</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>1. Load the CAD data into Mentor.</P>
+
+<P>2. Select File &gt; Create &gt; Neutral File.</P>
+
+<P>This will create the ASCII file. Be sure to include all of the data types. </P>
+
+<P>3. Give the file a .NEU extension.</P>
+
+<P><B>Notes On File Generation</B></P>
+
+<P>When creating a neutral file in Mentor the user has multiple options for what data to include. Selecting anything less than all options will result in missing data which is either imperative or at least useful in CAMCAD.</P>
+
+<P><B>Items controlled by the Neutral.IN file</B></P>
+
+<P><B>.BOARDOUTLINE</B></P>
+
+<P>Sets the default layer which is the Primary Board Outline</P>
+
+<P>•Syntax:  .BOARDOUTLINE  “layername” </P>
+
+<P>•Example:  .BOARDOUTLINE  “BOARD_OUTLINE” </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Sets the default layer which is the Primary Component Outline</P>
+
+<P>•Syntax: .COMPOUTLINE    “layername” </P>
+
+<P>•Example:  .COMPOUTLINE   “COMPONENT_PLACEMENT_OUTLINE” </P>
+
+<P><B>.TYPEATTR</B></P>
+
+<P>This command identifies attributes which are defined in the TYPEATT section that should be assigned to components.</P>
+
+<P><B>.FIDUCIALATTR</B></P>
+
+<P><B>.TOOLINGATTR</B></P>
+
+<P><B>.GENERICATTR</B></P>
+
+<P><B>.PADATTR</B></P>
+
+<P>Set handling for padstacks by either ignoring them or converting them to fiducials</P>
+
+<P>•Syntax:  .PADATTR     padshape name       handling </P>
+
+<P>•Example:  .PADATTR      dummy_pad         ignore </P>
+
+<P><B>.MIRRORLAYER</B></P>
+
+<P>Establishes default layer mirroring.</P>
+
+<P>•Syntax:  .MIRRORLAYER     [layer to be mirrored]     [mirror layer name] </P>
+
+<P>•Example:  .MIRRORLAYER    SOLDER_MASK_1        SOLDER_MASK_2 </P>
+
+<P><B>.UNNAMEDNET</B></P>
+
+<P>Nets which are found to begin with the string given will be renamed to $$__device.pin, where device.pin is the first device pin on that net.</P>
+
+<P>•Syntax:  .UNNAMEDNET       [generic node string] </P>
+
+<P>•Example:  .UNNAMEDNET      /N$ </P>
+
+<P><B>.TOLERANCE</B></P>
+
+<P>This command identifies a tolerance attribute name. If this attribute is found attached to a component, CAMCAD will identify and handle correctly various value strings, like -+10% or +10%-10%.</P>
+
+<P>•Syntax:  .TOLERANCE      [tolerance attribute name] </P>
+
+<P>•Example:  .TOLERANCE     TOL </P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  <B>Working With Apertures</B></P>
+
+<P>See also: <U>Aperture Read</U> </P>
+
+<P><U>Defining Undefined Apertures</U> </P>
+
+<P><U>Automatic Macro File Generation</U></P>
+
+<P><U>Tools &gt; Aperture List</U> </P>
+
+<P><U>Advanced Macro File Tips</U></P>
+
+<P>Many people use CAMCAD for importing, viewing, editing, and exporting Gerber files. Gerber files come in two formats, RS274 and RS274X. The difference between these two formats deals with apertures. Standard Gerber files (RS274) need separate Aperture files, while Gerber-X files (RS274X) contain embedded aperture information. CAMCAD is able to recognize and work with both kinds of Gerber formats, and is able to translate from standard Gerber to Gerber-X.</P>
+
+<P>It is easy to find out whether your Gerber file is a RS274 type or RS274X type. Simply import it into CAMCAD. If it looks correct, with nothing out of the ordinary, it is a Gerber-X file. If you see your board covered with large green circles with numbers inside, you have a standard Gerber file. The circles represent undefined apertures. </P>
+
+<P><B>Tip</B></P>
+
+<P>You can toggle the display of the undefined aperture circles on or off. From the menu commands, select <B>Settings &gt; Modify Settings</B> and click on the Aperture tab, and toggle off the display of undefined apertures.</P>
+
+<P>Even though the display of undefined apertures may be toggled on or off, it is always better to import the Aperture file to assure the correct viewing of the Gerber file.</P>
+
+<P>Aperture file import is a separate import process from importing the Gerber files. Select <B>File &gt; Import &gt; Aperture Read</B>. Aperture files will contain information regarding D-Code or Aperture Number, Shape, Xsize, and Ysize. Unfortunately, there are many different Aperture file formats, each varying the way it presents aperture information. CAMCAD must have a way of knowing which order to expect the aperture information; it does this with a text file called a <B>Macro File</B>. </P>
+
+<P>The first window that appears in the aperture import process is called the Aperture Smart Reader: </P>
+
+<P><IMG SRC="../images/bm184.gif" ALT="" BORDER=0></P>
+
+<P><I>The Aperture Smart Reader Dialog</I></P>
+
+<P>This is the window that you select the macro file that you wish to import the Aperture file through. The default macro file, called default.mac, works with many different kinds of aperture file formats. Use the default.mac macro file for the sample file. Click <B>OK</B>. The next window asks for the aperture file to open. In the <B>Samples &gt; Gerber</B> directory, choose the sample aperture file aperture.gap. </P>
+
+<P>The third window that you will see is the Imported Apertures window:</P>
+
+<P><IMG SRC="../images/bm185.gif" ALT="" BORDER=0></P>
+
+<P><I>The Imported Apertures Dialog</I></P>
+
+<P>This window indicates the success of the import, and shows you the apertures that will be imported. Click on the <B>View Logfile</B> button to view the import, line by line. Verify that each relevant aperture line is preceded by a <B>Match Found!</B>. Lines which show <B>Could Not Find Match For</B> indicate unmatched lines in the aperture file. If necessary, customization of the Macro file is possible. Refer to the relevant pages in the CAMCAD Help Reference, and open the file default.mac in any text editor and review the beginning sections.</P>
+
+<P>If the Imported Apertures dialog appears blank, that means the wrong macro file was used to import the apertures. If only a few apertures are defined, but some are left out, chances are very good that you can customize that macro file to read in the other missing apertures. If all of the apertures are coming up, click on <B>Accept</B> to finish importing them into CAMCAD. <B>Reject</B> will close the import dialog without importing the apertures. <B>View Logfile</B> will show you the logfile of the conversion line by line, which is extremely useful if you need to customize the macro file. The logfile will show you which lines were brought in and which lines were rejected by the macro file, guiding you to which sections of the macro file need customization.</P>
+
+<P>Tip</P>
+
+<P>In the Help Reference, refer to the page titled <U>Automatic Macro File Generation</U> to create various macro file samples.</P>
+
+<P>Once the apertures are imported into CAMCAD, they can be viewed by selecting <B>Tools &gt; Aperture List</B>. The Aperture List dialog shows useful information regarding imported apertures. From left to right, you will see the aperture shape, D-Code, exported as name, Xsize, Ysize, rotation, and offset values. From this dialog, you may view or edit aperture information. Select an aperture by double-clicking on the D-Code. The <B>Edit Aperture</B> dialog appears, offering settings and values for the aperture. Make any necessary changes, but note that the changes will be global throughout the database. This means that if you change D-11 from 35 mils to 60 mils, for example, all instances of the D-11 (both flashes as pad shapes and draws as line widths) will be changed.</P>
+
+<P>It is sometimes necessary to view multiple Gerber files in CAMCAD, each with its own separate Aperture file. A problem arises: each Aperture file may contain a distinct D-Code that must be retained for proper viewing of the associated Gerber file. As multiple Aperture files are imported into CAMCAD, D-Codes are overwritten (there can not be 2 D-17s, for example). Therefore, there must be a way of uniquely identifying a pair of Gerber &amp; Aperture files that handles multiple instances of D-Codes. CAMCAD does this by the optional <B>Aperture Prefix</B> setting. In the <B>Aperture Smart Reader</B> dialog there is a field for the Aperture Prefix. Assign a prefix such as 'A' or '1.’ Then import the Aperture file. Next, import the Gerber file. In the Gerber Import Format dialog, there is also an Aperture Prefix field. Assign the same prefix as the Aperture file. Follow the same procedure for each Aperture &amp; Gerber file pair, assigning a unique prefix to each. </P>
+
+<P>Once all Gerber and Aperture files are imported, use the Set D-Codes button in the Aperture List dialog to reassign and organize all imported apertures. The entire resulting database can then be exported to Gerber-X files after any needed editing.</P>
+
+</BODY>
+</HTML>

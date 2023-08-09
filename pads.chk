@@ -1,0 +1,33 @@
+;-----------------------------------------------------------------------
+;
+;The ".case_sensitive" command makes the "acceptable_charaters" strings 
+;in the commands below case sensitive. 
+.case_sensitive
+;
+; .v command = acceptable range
+;
+; All .v commands are of the following format.
+;
+; .v:type_id  max_len  acceptable_charaters  substitute_preface
+;
+; v = vianames
+; g = geometry (DECAL)
+; p = padstack
+; t = typecheck (PARTTYPE)
+; c = component (PART)
+; e = pinname
+; n = netname
+;
+.v:v  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_.  	VIA_
+.v:g  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_./  	GEOM_
+.v:p  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_. 	PAD_
+.v:t  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_/\\  TYPE_
+.v:c  8    ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_#  	#
+.v:e  4    ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_   	P
+.v:n  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_   	NET
+;
+; Substitute
+;.s
+; Partial Substitue
+;.x
+;

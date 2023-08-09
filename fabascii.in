@@ -1,0 +1,10 @@
+;
+; FABASCII.IN
+;
+;     Fabmaster type    Probename  as defined in default.prb
+.NAILTYPE	1	"PROBE_50"  
+.NAILTYPE	2	"PROBE_50"  
+.NAILTYPE	3	"PROBE_50"  
+.NAILTYPE	4	"PROBE_50"  
+;
+; end FABASCII.IN

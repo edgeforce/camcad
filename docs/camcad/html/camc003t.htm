@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  <B>Polyline Display Rules</B></P>
+
+<P>In CAMCAD, all polyline draws will follow the following rules:</P>
+
+<P>•All verticies which are not endpoints will be displayed as round.</P>
+
+<P>•Endpoints of lines and polylines will be displayed as Round, Square, or Endcap.</P>
+
+<P>•For polylines drawn with a Round or Square aperture, all verticies will be displayed as round. For polylines drawn with a Rectangle aperture, all verticies will be displayed as square.</P>
+
+<P>•Square line ends will be handled with a rotated aperture.</P>
+
+<P>•Endcap line ends will be handled with a rotated aperture.</P>
+
+<P><B>Gerber Output Rules:</B></P>
+
+<P>•<U>Extended (RS274x) Gerber Output</U>: Extended Gerber output must support rotated apertures</P>
+
+<P>•<U>Standard (RS274) Gerber Output</U>: Must warn users if non-othogonal lines and/or polylines drawn with a Square or Endcap exist. These features will be assigned a new round aperture of same width as the original geometry </P>
+
+<P><B>Rotated Apertures In General:</B></P>
+
+<P>Square and round apertures can be handled by CAMCAD. Rectangular apertures cannot be rotated.</P>
+
+</BODY>
+</HTML>

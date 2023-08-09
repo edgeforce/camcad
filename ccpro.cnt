@@ -1,0 +1,25 @@
+:Base  ccpro.HLP>
+:Title CAMCAD - ProfessionalEdition
+1 Internal Attributes For PCB Designs=Internal_Attributes
+1 Reader Options
+2 Scicards/Harris-EDA Reader=CII_Reader
+2 Incases Theda Reader=Theda_Reader
+2 Mentor Neutral Reader=Menneu_Reader
+2 Mentor 4 Reader=Men4_Reader
+2 Allegro Reader=Allegro_Reader
+2 Visula & Cadstar-NT Reader=CADF_Reader
+2 VeriBest EIF Reader=EIF_Reader
+2 Protel For Windows Reader=PFW_Reader
+2 PCAD Reader=PCAD_Reader
+2 PADS Reader=PADS_Reader
+2 Orcad Reader=Orcad_Reader
+2 Accel Reader=Accel_Reader
+2 Gerber / Gerber-X Reader=Gerber_Reader
+2 HPGL / HPGL2 Reader=HPGL_Reader
+2 DXF Reader=DXF_Reader
+1 Writer Options
+2 Gerber Writer=Gerber_Writer
+2 DXF Writer=DXF_Writer
+2 IPC 350/356/356A Writer=IPC_Writer
+2 Gencad Writer=Gencad_Writer
+1 Installation Notes

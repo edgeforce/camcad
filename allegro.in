@@ -1,0 +1,243 @@
+;
+; This symbol means that this is the PCB board 
+;   (which may be used in step & repeat)
+;
+; This is the board symbol that was agreed upon as to be the panel marker.
+.BOARDSYMBOL    STEPREP
+;
+; force a symbol to be mechanical.
+.MECHANICALSYMBOL       FID40
+;
+; convert a mechanical padstack (or prefix) to a fiducial (both)
+.FIDUCIALPAD      FID*
+;
+; convert a mechanical padstack (or prefix) to a tooling hole
+.TOOLPAD	   TOOL*
+.TOOLPAD	   TAR*
+.TOOLPAD	   MTG*
+;
+; convert a mechanical part (or prefix) to a fiducial (both)
+.FIDUCIALPART      FUD*
+.FIDUCIALTOPPART   FUD*
+.FIDUCIALBOTPART   FUD*
+;
+; convert a mechanical part (or prefix) to a tooling hole
+.TOOLPART	   TOOL*
+.TOOLPART	   TAR*
+.TOOLPART	   MTG*
+;
+;
+; This are attributes which indicate a symbol will be places on the panel file
+.PANELATTR              PANEL_FIDUCIAL
+.PANELATTR              PANEL_TOOLING
+;.PANELATTR              CLIP_DRAWING
+.PANELATTR		BREAKAWAY
+.PANELATTR		CUTOUT
+;.PANELATTR		BARCODE
+;
+; These are symbols, which need to be placed on the panel file
+.PANELSYMBOL    MOIRE
+.PANELSYMBOL    PROPNOTE
+.PANELSYMBOL    TITLENOTE
+.PANELSYMBOL    LSTACK4
+.PANELSYMBOL    SQUEEGEE
+.PANELSYMBOL	CROPMARK
+.PANELSYMBOL    FIDP120
+.PANELSYMBOL	STEP_REPEAT
+;
+; This explodes symbols - only recommended for Format symbols.
+; For Packages and Mechanicals, only graphic is exploded, no Pins.
+;.EXPLODESYMBOL  MH156
+;.EXPLODESYMBOL  MH159SPT   
+;.EXPLODESYMBOL  CM108B   
+.EXPLODESYMBOL  BARCODEA   
+;.EXPLODESYMBOL  4HOLES
+;
+; This are attributes, which should appear in the component list
+.COMPATTR		COMP_PART_NUMBER
+.COMPATTR		COMP_PACKAGE
+.COMPATTR		COMP_VALUE
+.COMPATTR		COMP_DEVICE_TYPE
+.COMPATTR		BOARD_FIDUCIAL
+.COMPATTR		BOARD_TOOLING
+.COMPATTR               BARCODE
+;
+; This are attributes, which should appear in the type list
+.TYPEATTR		COMP_PART_NUMBER
+.TYPEATTR		COMP_PACKAGE
+.TYPEATTR		COMP_VALUE
+.TYPEATTR		COMP_DEVICE_TYPE
+.TYPEATTR		COMP_VOLTAGE
+.TYPEATTR		COMP_RATED_POWER
+.TYPEATTR		COMP_RATED_VOLTAGE
+.TYPEATTR		COMP_RATED_CURRENT
+.TYPEATTR		COMP_TOL
+.TYPEATTR		COMP_DEVICE_LABEL
+;
+.COMPATTR		COMP_INSERTION_CODE   
+.COMPATTR	  	COMP_HEIGHT
+;
+; Allegro does not have a marker for SMD packages and pads.
+; This Packages and Padstacks are marked as SMD 
+.SMDATTR		S603AT
+;
+; CAMCAD V3.0.0d allows multiple (up to 10) outlines for Board and Panel
+;
+; This is the primary board outline marked in class	"CLASS" "SUBCLASS"
+; This sets automatically the graphic element to PANEL
+.PANELOUTLINE   "BOARD GEOMETRY" "OUTLINE_PANEL"
+:
+; This is the primary board outline marked in class	"CLASS" "SUBCLASS"
+; This sets automatically the graphic element to PCB
+;
+; This is the true board outline layer for 6916.
+;.BOARDOUTLINE   "BOARD GEOMETRY" "LAYER90"
+; This is the true board outline layer for the 5974a and 6326a designs.
+;.BOARDOUTLINE   "BOARD GEOMETRY" "LY90"
+; This is the true board outline layer for the "golden board".
+;.BOARDOUTLINE   "BOARD GEOMETRY" "BD_OUTLINE"
+.BOARDOUTLINE   "BOARD GEOMETRY" "OUTLINE"
+.BOARDOUTLINE	"BOARD GEOMETRY" "OUTLINE_BD"
+:
+; This is the primary component outline marked in class	"CLASS" "SUBCLASS"
+:
+; PLACE_BOUND_TOP is an alternate to ASSEMBLY_TOP if ASSEMBLY_TOP does not
+: contain adaquit component outline information.
+;.COMPOUTLINE    "PACKAGE GEOMETRY"      "PLACE_BOUND_TOP"
+.COMPOUTLINE    "PACKAGE GEOMETRY"      "ASSEMBLY_TOP"
+;
+; If a text is found, the text string is used as the COMPHEIGHT value.
+.COMPHEIGHT	"PACKAGE GEOMETRY"	"PLACE_BOUND_TOP"
+;
+; 
+; Class for the TEXT which should be used as the reference designator.
+; Do not assign _TOP or _BOTTOM, otherwise only top or bottom components
+; will get a graphical refdes.
+;
+.REFDES		"REF DES"		"SILKSCREEN_"
+;
+; Assign a Attribute to Component CAMCAD_ATTRIB  CLASS SUBCLASS
+; (no CAMCAD attribute can be duplicated). This is
+; that multiple Reference designators and other attributes can be assigned.
+.TEXTCOMPATTR	"REFDES1"	"REF DES"	"ASSEMBLY_"
+;
+.PANELGRAPHIC	"MANUFACTURING"	"PHOTOPLOT_OUTLINE"
+.PANELGRAPHIC   "BOARD GEOMETRY" "OUTLINE"
+.PANELGRAPHIC   "BOARD GEOMETRY" "ASSEMBLY_NOTES"
+.PANELGRAPHIC	"BOARD GEOMETRY" "SPLIT_PLANE_VCC"
+.PANELGRAPHIC	"BOARD GEOMETRY" "SPLIT_PLANE_GND"
+;
+; Layer types
+;        Layer types
+;	"UNKNOWN GRAPHIC",	// graphic layer
+;	"SIGNAL TOP",		// trace layer top side
+;	"SIGNAL INNER",	        // trace layer inner layer - number is from stackup
+;	"SIGNAL BOTTOM",	// trace layer bottom side
+;	"SIGNAL ALL",		// trace layer (all layers)
+;	"POWER NEGATIVE",	// power plane layer negative view
+;	"POWER POSITIVE",	// power plane layer positive view				
+;	"SPLIT PLANE",		// split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known exect it is a signal layer
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",		// pad layer top side
+;	"PAD INNER",		// pad layer inner layer - number is from stackup
+;	"PAD BOTTOM",		// pad layer bottom side	
+;	"PAD ALL",		// pad layer (all layers)
+;	"PAD THERMAL",		// heat thermal layer
+;	"PASTE TOP",		// solder paste layer top side
+;	"PASTE BOTTOM",		// solder paste layer bottom side
+;	"PASTEMASK ALL",	// solder paste layer (all layers)
+;	"SOLDERMASK TOP",	// solder mask layer top side
+;	"SOLDERMASK BOTTOM",	// solder mask layer bottom side
+;	"SOLDERMASK ALL",	// soldermask layer (all layers)
+;	"SILKSCREEN TOP",	// silkscreen layer top side
+;	"SILKSCREEN BOTTOM",	// silkscreen layer bottom side
+;	"DRILL"			// drill symbol layer (all layers)
+;	"REDLINE",		// engineering markup layer
+;	"DRILL",
+;	"GENERIC TOP",		// this is for top and bottom view
+;	"GENERIC BOTTOM",	// same
+;	"GENERIC ALL",
+;	"BOARD OUTLINE",
+;	"PAD OUTER",
+;	"SIGNAL OUTER",
+;
+;
+.LAYERATTR	ALL			"GENERIC ALL"
+.LAYERATTR	SILKSCREEN_TOP		"SILKSCREEN TOP"
+.LAYERATTR	SILKSCREEN_BOTTOM	"SILKSCREEN BOTTOM"
+.LAYERATTR	SOLDERMASK_TOP		"SOLDERMASK TOP"
+.LAYERATTR	SOLDERMASK_BOTTOM      	"SOLDERMASK BOTTOM"
+.LAYERATTR	PASTEMASK_TOP		"PASTEMASK TOP"
+.LAYERATTR	PASTEMASK_BOTTOM      	"PASTEMASK BOTTOM"
+.LAYERATTR	PLACE			"GENERIC ALL"
+.LAYERATTR	PLACE_BOUND_TOP		"GENERIC TOP"
+.LAYERATTR	PLACE_BOUND_BOTTOM	"GENERIC BOTTOM"
+.LAYERATTR	REFNAME_TOP		"GENERIC TOP"
+.LAYERATTR	REFNAME_BOT		"GENERIC BOTTOM"
+.LAYERATTR	DISPLAY_TOP		"GENERIC TOP"
+.LAYERATTR	DISPLAY_BOTTOM		"GENERIC BOTTOM"
+.LAYERATTR	ASSEMBLY_TOP		"GENERIC TOP"
+.LAYERATTR	ASSEMBLY_BOTTOM		"GENERIC BOTTOM"
+;
+;
+;
+;
+.MIRRORLAYER    SOLDERMASK_TOP          SOLDERMASK_BOTTOM
+.MIRRORLAYER    SILKSCREEN_TOP          SILKSCREEN_BOTTOM
+.MIRRORLAYER    PASTEMASK_TOP           PASTEMASK_BOTTOM
+.MIRRORLAYER    PLACE_BOUND_TOP         PLACE_BOUND_BOTTOM
+.MIRRORLAYER    ASSEMBLY_TOP            ASSEMBLY_BOTTOM
+.MIRRORLAYER	TITLE_TOP		TITLE_BOTTOM
+.MIRRORLAYER	DISPLAY_TOP		DISPLAY_BOTTOM
+;
+.MIRRORLAYER	~TSM                    ~BSM
+.MIRRORLAYER	~TPM                    ~BPM
+.MIRRORLAYER	~TFM                    ~BFM
+.MIRRORLAYER	TOP                     BOTTOM
+;
+; CADENCE does not guaranty that the pinname is unique, but pinnr are.
+.USEPINNAME     n
+;
+; do not use the internal_pad_def, but all the exploded layers.
+.USE_INTERNAL_PAD_DEF	n
+;
+; Graphics found in this class will be ignored.
+; Text found in this call will be converted to Attribute 
+; and attached to the component.
+.CLASS_2_COMPATTR      "TOLERANCE"
+.CLASS_2_COMPATTR      "USER PART NUMBER"
+.CLASS_2_COMPATTR      "DEVICE TYPE"
+.CLASS_2_COMPATTR      "COMPONENT VALUE"
+;
+;
+;---------------------------------------------------------------------------
+;SMD Rules
+; 
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+;
+; Attribute Allegro to CAMCAD 
+.ATTRIBMAP     	"TOLER"			"TOLERANCE"
+.ATTRIBMAP	"PTOLER"		"+TOL"
+.ATTRIBMAP	"NTOLER"		"-TOL"
+.ATTRIBMAP	"INSTPAR"		"VALUE"
+.ATTRIBMAP	"COMP_VALUE"		"VALUE"
+.ATTRIBMAP	"COMP_TOL"		"TOLERANCE"
+.ATTRIBMAP	"COMP_PART_NUMBER"	"PARTNUMBER"
+;
+; end of allegro.in

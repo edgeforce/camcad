@@ -1,0 +1,223 @@
+;
+; pads.in
+;
+; List of available device types
+;   DEVICETYPE    ; generic - unknown etc...
+;   CAPACITOR
+;   COIL
+;   DIODE					
+;   IC						
+;   FET
+;   FLATPACK					
+;   HOLEMODULE				
+;   NPN					
+;   PADMODULE
+;   P_CAPACITOR			
+;   PNP					
+;   POTENTIOMETER			
+;   TRANSISTOR			
+;   RESISTOR				
+;   RELAY				
+;   SCR						
+;   SWITCH				
+;   TRANSFORMER
+;   CRYSTAL				
+;   ZENER					
+;   RIBBUS				
+;   EDGE_CONNECTOR
+;   ONBOARD_CONNECTOR		
+;   TESTPOINT		
+;   MISC_CONNECTOR			
+;   FUSE				
+;   VARISTOR					
+;   VOLTAGE_REGULATOR		
+;   FERRITE_BEAD		
+;   GATE_ARRAY				
+;   FILTER				
+;   DELAY_LINE				
+;   SIP
+;   LED						
+;   LEADLESS_CHIP
+;   MECHANICAL			
+;   WIREBOND					
+;   HYBRID					
+;   SCHOTTKY_DIODE
+;   RESITOR_PACK			
+;   DA_CONVERTER			
+;   AD_CONVERTER			
+;   PASTE_RESISTOR			
+;   HEATSINK
+;   JUMPER					
+;   SMALL_OUTLINE_IC
+;   PLASTIC_CHIP		
+;   JLEAD_CHIP				
+;   GULLWING_CHIP
+;   JLEAD_SMALL_IC
+;
+; .LOGICDEVICETYPE   UND = Undefined
+; this adds a devicetype from a logic type.
+.LOGICDEVICETYPE     FID MECHANICAL
+.LOGICDEVICETYPE     CAP CAPACITOR
+.LOGICDEVICETYPE     HDR MISC_CONNECTOR
+.LOGICDEVICETYPE     JCK MISC_CONNECTOR
+.LOGICDEVICETYPE     IND COIL
+.LOGICDEVICETYPE     RES RESISTOR
+.LOGICDEVICETYPE     TTL IC
+.LOGICDEVICETYPE     XTL CRYSTAL
+.LOGICDEVICETYPE     PLC IC
+.LOGICDEVICETYPE     TRX TRANSFORMER
+.LOGICDEVICETYPE     SOJ IC
+.LOGICDEVICETYPE     SSO IC
+.LOGICDEVICETYPE     DIO DIODE
+.LOGICDEVICETYPE     RLY RELAY
+;.LOGICDEVICETYPE     GEN
+.LOGICDEVICETYPE     CON MISC_CONNECTOR
+.LOGICDEVICETYPE     TRN TRANSFORMER
+;
+.FIDUCIALATTR   FID0
+.FIDUCIALATTR   FID1
+.FIDUCIALATTR   FID2
+.FIDUCIALATTR   FID3
+.FIDUCIALATTR   FID4
+;
+; To recognize an SMD attribute the attribute must be SMD:1 (SMD:TRUE)
+.SMDATTR        SMD
+;
+; Height attribute	   Units in PADS UNITS
+;			   I = Inch
+;			   b = basic
+;			   A = mil
+;			   m = metric
+.HEIGHTATTR	ZHEIGHT	   A
+;
+; Pins, which have no copper on any electrical layer
+; ignore = drop them
+; fiducial = make them fiducials
+; normal = keep them as eletrical pins
+.NON_ELECTRICAL_PINS     ignore
+;.NON_ELECTRICAL_PINS     normal
+;
+; This is the primary component outline
+.COMPOUTLINE	DECAL_1
+.COMPOUTLINE	DECAL_26
+;
+.MIRRORLAYER    PADLAYER_TOP  PADLAYER_BOT
+;
+; Display log file
+.DISPLAYLOG               y
+;
+.UNNAMEDNET     $$
+;
+.UNROUTLAYER		  n
+;
+;---------------------------------------------------------------------------
+;SMD Rules
+; 
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+;	"UNKNOWN GRAPHIC",
+;	"SIGNAL TOP",		// component layer
+;	"SIGNAL BOTTOM",	// solder layer
+;	"SIGNAL INNER",	// inner layer - number is from stackup
+;	"SIGNAL ALL",		// all layer 
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",			// pad top layer
+;	"PAD BOTTOM",		// no param
+;	"PAD INNER",		// no param
+;	"PAD ALL",		// no param
+;	"PAD THERMAL",		// no param
+;	"PASTE TOP",
+;	"PASTE BOTTOM",
+;	"SOLDERMASK TOP",
+;	"SOLDERMASK BOTTOM",
+;	"SILKSCREEN TOP",
+;	"SILKSCREEN BOTTOM",
+;	"POWER NEGATIVE",	// no param, power layer
+;	"POWER POSITIVE",	// no param, power				
+;	"SPLIT PLANE",		// no param, split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known except it is a signal layer
+;	"SOLDERMASK ALL",
+;	"PASTEMASK ALL",
+;	"REDLINE",
+;	"DRILL",
+;	"GENERIC TOP",		// this is for top and bottom view
+;	"GENERIC BOTTOM",	// same
+;	"GENERIC ALL",
+;	"BOARD OUTLINE",
+;	"PAD OUTER",
+;	"SIGNAL OUTER",
+;
+; these are the PADS layer prefix and numbers 
+; 
+.LAYERATTR     DECAL_21		"SOLDERMASK TOP"		
+.LAYERATTR     DECAL_22		"PASTE BOTTOM"		
+.LAYERATTR     DECAL_23		"PASTE TOP"		
+.LAYERATTR     DECAL_24		"DRILL"		
+.LAYERATTR     DECAL_25		"POWER NEGATIVE"		
+.LAYERATTR     DECAL_26		"SILKSCREEN TOP"		
+.LAYERATTR     DECAL_27		"GENERIC TOP"		
+.LAYERATTR     DECAL_28		"SOLDERMASK BOTTOM"		
+.LAYERATTR     DECAL_29		"SILKSCREEN BOTTOM"		
+.LAYERATTR     DECAL_30		"GENERIC BOTTOM"		
+;
+.LAYERATTR     PADLAYER_21	"SOLDERMASK TOP"		
+.LAYERATTR     PADLAYER_22	"PASTE BOTTOM"		
+.LAYERATTR     PADLAYER_23	"PASTE TOP"		
+.LAYERATTR     PADLAYER_24	"DRILL"		
+.LAYERATTR     PADLAYER_25     	"PAD THERMAL"		
+.LAYERATTR     PADLAYER_26	"SILKSCREEN TOP"		
+.LAYERATTR     PADLAYER_27	"GENERIC TOP"		
+.LAYERATTR     PADLAYER_28	"SOLDERMASK BOTTOM"		
+.LAYERATTR     PADLAYER_29	"SILKSCREEN BOTTOM"		
+.LAYERATTR     PADLAYER_30	"GENERIC BOTTOM"		
+;
+.LAYERATTR     21		"SOLDERMASK TOP"		
+.LAYERATTR     22		"PASTE BOTTOM"		
+.LAYERATTR     23		"PASTE TOP"		
+.LAYERATTR     24		"DRILL"		
+.LAYERATTR     25		"POWER NEGATIVE"		
+.LAYERATTR     26		"SILKSCREEN TOP"		
+.LAYERATTR     27		"GENERIC TOP"		
+.LAYERATTR     28		"SOLDERMASK BOTTOM"		
+.LAYERATTR     29		"SILKSCREEN BOTTOM"		
+.LAYERATTR     30		"GENERIC BOTTOM"   
+;
+.LAYERATTR     LABEL_TOP      	"GENERIC TOP"		
+.LAYERATTR     LABEL_BOT	"GENERIC BOTTOM"		
+;     	
+;
+;	
+; the tolerance keyword is checked for a good value.
+; allowed values are:
+; 10
+; 10%
+; +-10%
+; -+10%
+; +10%-10%
+; -10%+10%
+; -10% +10%
+; +10% -10%
+; This maps CAD attributes to internal attributes
+.ATTRIBMAP      assembly_name	REFNAME 				 	
+.ATTRIBMAP	Tolerance	TOLERANCE
+.ATTRIBMAP	TOLER		TOLERANCE
+.ATTRIBMAP	Ref.Des.	REFNAME
+.ATTRIBMAP	"Part Type"	$$DEVICE$$
+; This does not have any units !
+;.ATTRIBMAP	"ZHEIGHT"	COMPHEIGHT
+;
+; end pads.in

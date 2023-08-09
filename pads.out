@@ -1,0 +1,64 @@
+;
+;
+; This is the default pads layer type mapping.
+; In Pads electrcial layers are predefined 1..20
+;
+;	"SIGNAL TOP",		// component layer
+;	"SIGNAL BOTTOM",	// solder layer
+;	"SIGNAL INNER",	// inner layer - number is from stackup
+;	"SIGNAL ALL",		// all layer 
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",			// pad top layer
+;	"PAD BOTTOM",		// no param
+;	"PAD INNER",		// no param
+;	"PAD ALL",		// no param
+;	"PAD THERMAL",		// no param
+;	"PASTE TOP",
+;	"PASTE BOTTOM",
+;	"SOLDERMASK TOP",
+;	"SOLDERMASK BOTTOM",
+;	"SILKSCREEN TOP",
+;	"SILKSCREEN BOTTOM",
+;	"POWER NEGATIVE",	// no param, power layer
+;	"POWER POSITIVE",	// no param, power				
+;	"SPLIT PLANE",		// no param, split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known except it is a signal layer
+;	"SOLDERMASK ALL",
+;	"PASTEMASK ALL",
+;	"REDLINE",
+;	"DRILL",
+;	"GENERIC TOP",		// this is for top and bottom view
+;	"GENERIC BOTTOM",	// same
+;	"GENERIC ALL",
+;	"BOARD OUTLINE",
+;	"PAD OUTER",
+;	"SIGNAL OUTER",
+;	"DRC MARKER",
+;       "PLANE CLEARANCE",	// used in PADSTACK definitions
+;	"COMPONENT OUTLINE",
+;
+;
+.LAYERMAP	"PAD THERMAL"		25
+.LAYERMAP	"PASTE TOP"    		23
+.LAYERMAP	"PASTE BOTTOM"		22
+.LAYERMAP	"SOLDERMASK TOP"	21
+.LAYERMAP	"SOLDERMASK BOTTOM"	28
+.LAYERMAP	"SILKSCREEN TOP"	26
+.LAYERMAP	"SILKSCREEN BOTTOM"	29
+.LAYERMAP	"DRILL"			24
+.LAYERMAP	"BOARD OUTLINE"		0
+.LAYERMAP	"PLANE CLEARANCE"	25
+;	
+; This assigns a layer name to a PADS stack number
+.LAYERNAME	21	"SOLDER MASK TOP"
+.LAYERNAME	22	"PASTE MASK BOTTOM"
+.LAYERNAME	23	"PASTE MASK TOP"
+.LAYERNAME	24	"DRILL DRAWING"
+.LAYERNAME	25	"Layer_25"
+.LAYERNAME	26	"SILKSCREEN TOP"
+.LAYERNAME	27	"ASSEMBLY DRAWING TOP"
+.LAYERNAME	28	"SOLDER MASK BOTTOM"
+.LAYERNAME	29	"SILKSCREEN BOTTOM"
+.LAYERNAME	30	"ASSEMBLY DRAWING BOTTOM"
+; end pads.out
+

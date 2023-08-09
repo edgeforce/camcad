@@ -1,0 +1,45 @@
+; GENCAD.OUT
+;
+; The output accuracy is taken from Settings inside CAMCAD. This can
+; overwrite this settings.
+;.OUTPUT_UNIT_ACCURACY	3
+;
+; This is for BOARD
+.FIDUCIALNAME   fidnamexxx
+;
+; This is for PANEL
+.PANELFIDUCIALNAME   panelfidxxx
+;
+; If a testpin does not have a reference name, use the prefix with an added counter.
+.TESTPINPREFIX	     TSTPIN_
+;
+;
+; I = Inches
+; M = Millimeters
+; 
+; Default drill size for TOOLING that has no size !
+.DEFAULTDRILLSIZE     i 0.01
+; Fiducials may have been defined without a padshape. In this case the
+; NO_PAD is written out.
+.NO_PADSIZE	      i 0.02
+;
+; testpoints are converted to Vias.
+; if set to Y, a dummy shape is generated and a component
+; is placed with the testpointshapeprefix shape.
+; the testpointshapeprefix is the prefix of the padshape, because
+; the shapename must be different than the PADSTACK name.
+.TESTPOINTSHAPEPREFIX	TPSHAPE_
+.CONVERT_TP_COMPS	n
+;
+; this updates the device section with component attributes, which
+; are not allowed to be as part of the component. Especially tolerance 
+; and values. However, the last component wins !
+.UPDATE_DEVICE_ATTRIBUTES y
+;
+; The Gencad spec allows spaces, however some GENRAD software can not 
+; deal with this.
+.NAMESPACE_ALLOWED	n
+;
+; Do not write any artwork section
+.WRITE_ARTWORK	n
+;

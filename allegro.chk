@@ -1,0 +1,28 @@
+;-----------------------------------------------------------------------
+;
+; .v command = acceptable range
+;
+; All .v commands are of the following format.
+;
+; .v:type_id  max_len  acceptable_charaters  substitute_preface
+;
+; s = component shape
+;
+.v:s  27   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   GEOM
+.v:c  27   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   COMP
+.v:p  18   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   PAD
+.v:n  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+=$/\<>.?":~@#%^&*(){}[]|   NET
+.v:d  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   PIN
+.v:e  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   DEVICE
+; Attribute Keyword
+.v:a  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   ATT
+; Flash Geometry
+.v:f  20   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_   FLASH     
+;
+; Substitute
+;.s
+; USEAGE: .s:type_id:type_id  full_string_to_replace   full_string_to_substitute
+; Partial Substitue
+;.x
+; USEAGE: .x:type_id:type_id  partial_string_to_replace   partial_string_to_substitute
+;

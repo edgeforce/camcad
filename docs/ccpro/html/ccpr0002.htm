@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  <U>CAMCAD - Professional Edition</U></H1>
+
+<H2>· Internal Attributes for PCB designs</H2>
+
+<P></P>
+
+<TABLE cols=4 width=599>
+
+<TR VALIGN="top">
+<TD width=21%>Internal defintion</TD>
+<TD width=18%>Attribute Name</TD>
+<TD width=25%>Attribute Values</TD>
+<TD width=36%>Attribute Meaning</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_NAME</TD>
+<TD width=18%>NAME</TD>
+<TD width=25%>Any String</TD>
+<TD width=36%>A name assigned to any entity<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_NETNAME</TD>
+<TD width=18%>NETNAME</TD>
+<TD width=25%>Any String</TD>
+<TD width=36%>A PCB netname used in graphic entities (circles, lines, polylines, arcs).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_REFNAME</TD>
+<TD width=18%>REFNAME</TD>
+<TD width=25%>Any String</TD>
+<TD width=36%>A PCB_COMPONENT designator as it appears in the graphic (silkscreen). </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_COMPPINNR</TD>
+<TD width=18%>PINNR</TD>
+<TD width=25%>A sequential integer, starting with 1.</TD>
+<TD width=36%>A pin number should be sequential (different that a pin name) and unique if the component is a PCB_COMPONENT.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_COMPHEIGHT</TD>
+<TD width=18%>COMPHEIGHT</TD>
+<TD width=25%>Any unit</TD>
+<TD width=36%>Should be in Page units. This is the extrution height for a component.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_POWERNET</TD>
+<TD width=18%>POWERNET</TD>
+<TD width=25%>NONE</TD>
+<TD width=36%>This marks a net in the Netlist to be a power-plane net.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_VIALAYER</TD>
+<TD width=18%>VIALAYER</TD>
+<TD width=25%>Startlayernumber, Endlayernumber</TD>
+<TD width=36%>The start layer and end layer is the Electrical Physical layer stackup.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_TYPELISTLINK</TD>
+<TD width=18%>DEVICE</TD>
+<TD width=25%>Any string</TD>
+<TD width=36%>This attribute is the link of the insert to CAMCADs type list.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_VALUE</TD>
+<TD width=18%>VALUE</TD>
+<TD width=25%>Any string</TD>
+<TD width=36%>This is a value for Resistors, Capacitors and other devices. The value should be in the format :<BR>
+M = Mega 10e6<BR>
+K ,k= Kilo 10e3<BR>
+m  = milli 10e-3<BR>
+U,u = micro 10e-6<BR>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_PARTNUMBER</TD>
+<TD width=18%>PARTNUMBER</TD>
+<TD width=25%>Any string</TD>
+<TD width=36%>A partnumber as described in the CAD systems</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_DEVICETYPE</TD>
+<TD width=18%>DEVICETYPE</TD>
+<TD width=25%>A fixed list of CAMCAD defined Devices (see *devicetypes in dbutil.cpp)</TD>
+<TD width=36%>-----</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_TEST</TD>
+<TD width=18%>TEST</TD>
+<TD width=25%>None</TD>
+<TD width=36%>A test symbol which can be assigned to : <BR>
+1.PCB_COMPONENT<BR>
+2.A Comp/Pin in the Netlist.<BR>
+3.A via</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_SMDSHAPE</TD>
+<TD width=18%>SMD</TD>
+<TD width=25%>None</TD>
+<TD width=36%>Assigned to a <BR>
+1.Padstack : needed to flag test access etc …<BR>
+2.Component : needed for insertion etc…</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_PINLOC</TD>
+<TD width=18%>PINLOC</TD>
+<TD width=25%>String</TD>
+<TD width=36%>Syntax:<BR>
+x,y,absolute pad rotation, padstackname, absolute padmirror.<BR>
+<BR>
+x,y in UNITS. </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=21%>ATT_PINACCESS</TD>
+<TD width=18%>PINACCESS</TD>
+<TD width=25%>String</TD>
+<TD width=36%>TOP, BOT, ALL</TD>
+</TR>
+</TABLE><BR>
+
+<P>Definition of PCB design files:</P>
+
+<P>Definition of PCB block</P>
+
+<P>A PCB block should have the following attributes. These attributes</P>
+
+<P>should not be modified by the user.</P>
+
+<P>"Source CAD system"</P>
+
+<P>"Layer zheight available"</P>
+
+<P>"Number of Routing Layers"</P>
+
+<P>Definition of PCB layers</P>
+
+<P>Every layer has </P>
+
+<P>layertype : Signal, Top, Bottom and a PAD type etc…</P>
+
+<P>artworkstacknumber :  how a artwork is build starts with toppaste, topsilk, ...</P>
+
+<P>electricalstacknumber : electrical stacking of layers, start with 1 (Top) to n (Bottom)</P>
+
+<P>physicalstacknumber :  physical manufacturing stacking of layers, </P>
+
+<P> signaltop / dialectric / signal_1 / dia / power_1 .... / solder</P>
+
+<P></P>
+
+<P>Layers also should have attributes concerning Layerheight, Material etc…</P>
+
+<P>Definition of PCB components.</P>
+
+<P>Padstack Type:</P>
+
+<P>Definition: This is a Geometry with BLOCKTYPE_PADSTACK containing Apertures on specific layers and one optional Tool. Also SMD padstacks must have the SMD attribute.</P>
+
+<P>Insert : A insert with a type INSERTYPE_PIN. Padstacks can be placed in the "PCBCOMPONENTS" hierachy and in the "PCB Design" hierachy.</P>
+
+<P>Tooling Type:</P>
+
+<P>Definition : This is a Geometry with BLOCKTYPE_TOOLING with a padstack containing a Tool.</P>
+
+<P>Insert : A insert with a type INSERTTYPE_TOOLING in the "PCB Design" hierachy</P>
+
+<P>Component Pins:</P>
+
+<P>Insert : A insert with a type INSERTTYPE_PIN. The pinname is the Refname. An additional ATT_COMPPINNR attribute can be attached. The "pinname will only get an attribute if the graphic representation of the pinname (layer, x, y, etc…) is defined.</P>
+
+<P>Component Height:</P>
+
+<P>A component height must be in the current design units of the database. Component height is normally attached to the component insert record, but also can be derived from the TYPELIST or Shape.</P>
+
+</BODY>
+</HTML>

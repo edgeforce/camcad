@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#K<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  ALLEGRO</H4>
+
+<P>CAMCAD Read/Import NameR-VAL</P>
+
+<P>Full CAD Format NameCadence Allegro PCB</P>
+
+<P>Supported VersionsCadence Allegro v: 6.0 through current</P>
+
+<P>Hardware PlatformWorkstation, PC</P>
+
+<P>Operating SystemUnix, Windows-NT</P>
+
+<P>Database ClassBoard Outline Class</P>
+
+<P>Component ClassLocal Component: Local component CAD systems are systems where the shape of the component can be changed locally (only for a single instance of the component).  Also called Exploded Component Class.</P>
+
+<P><B>Importing Allegro into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import</B></P>
+
+<P>Allegro Extract (brd.txt, pad.txt, sym.txt, and rte.txt)</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>To execute the Allegro extract utility, perform the following steps:</P>
+
+<P>1. From the UNIX command prompt enter  &gt;extract &lt;return&gt; </P>
+
+<P>2.You will be prompted for:</P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Layout name (*.brd): path/filename &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Extract command file (*.txt): path/valext &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Extract output filename (*.txt): path/brd &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Additional output filename (&lt;return&gt; if none) (*.txt): path/pad &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Additional output filename (&lt;return&gt; if none) (*.txt): path/sym &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Additional output filename (&lt;return&gt; if none) (*.txt): path/rte &lt;return&gt; </P>
+
+<P><IMG SRC="../images/bm2.gif" ALT="" BORDER=0>Additional output filename (&lt;return&gt; if none) (*.txt): &lt;return&gt; </P>
+
+<P>3.  This creates the following files that are used as input for CAMCAD:</P>
+
+<P>•brd.txt </P>
+
+<P>•pad.txt </P>
+
+<P>•sym.txt </P>
+
+<P>•rte.txt </P>
+
+<P><B>Notes On File Generation</B></P>
+
+<P><IMG SRC="../images/bm3.gif" ALT="" BORDER=0><B></B>You will need to use the extract script valext.txt, found in your CAMCAD directory. </P>
+
+<P><IMG SRC="../images/bm3.gif" ALT="" BORDER=0>Allegro may crash during the extract. This is because some user-defined attributes, which are specified to be extracted in the valext.txt script, may not exist in the binary database. Please check the extract.log file produced by the extract utility for a listing of the non-existing attributes that must be commented out of the valext.txt extract script prior to running. Such an error would appear in the extract.log file as follows:</P>
+
+<P># User Attributes are added here </P>
+
+<P>BARCODE</P>
+
+<P>Field 'BARCODE' is unknown.</P>
+
+<P>This means that in the valext.txt after the line “# User Attributes are added here” there is a line with “BARCODE” as an attribute to be extracted that does not exist in the database being extracted. This “BARCODE” line in the valext.txt extract script must be commented out using the pound symbol (# BARCODE). Subsequently, any attributes not in the valext.txt that are desired to be extracted may each be entered on a new line following the line reading “# User Attributes are added here.” For further information regarding the Allegro Extract utility and the use of extract scripts please refer to the Allegro documentation.</P>
+
+<P><B>Items controlled by the Allegro.IN file</B></P>
+
+<P><B>.BOARDSYMBOL</B></P>
+
+<P>This command identifies the string that is the panel marker.</P>
+
+<P>•Syntax:  .BOARDSYMBOL  string </P>
+
+<P>•Example:  .BOARDSYMBOL  STEPREP </P>
+
+<P><B>.MECHANICALSYMBOL</B></P>
+
+<P>Forces all components which match the geometry name string to be imported as mechanical components.</P>
+
+<P>•Syntax:  .MECHANICALSYMBOL   geometry name </P>
+
+<P>•Example:  .MECHANICALSYMBOL  FID40 </P>
+
+<P><B>.PANELATTR</B></P>
+
+<P><B>.PANELSYMBOL</B></P>
+
+<P><B>.EXPLODESYMBOL</B></P>
+
+<P>Geometries which match the geometry name string will be exploded upon import.</P>
+
+<P>•Syntax:  .EXPLODESYMBOL  geometry name </P>
+
+<P>•Example:  .EXPLODESYMBOL  MH156 </P>
+
+<P><B>.COMPATTR</B></P>
+
+<P><B>.TYPEATTR</B></P>
+
+<P><B>.SMDATTR</B></P>
+
+<P>Entities which match the given string will be marked as SMD.</P>
+
+<P>•Syntax:  .SMDATTR  geometry name </P>
+
+<P>•Example:  .SMDATTR  S603AT </P>
+
+<P><B>.PANELOUTLINE</B></P>
+
+<P>Identifies the default Primary Panel Outline layer by “class” and “subclass layer name.”</P>
+
+<P>•Syntax:  .PANELOUTLINE  “class name”  “subclass name” </P>
+
+<P>•Example: .PANELOUTLINE          “BOARD GEOMETRY”         “PNL_OUTLINE”</P>
+
+<P><B>.BOARDOUTLINE</B></P>
+
+<P>Identifies the default Primary Board Outline layer by “class” and “subclass layer name.”</P>
+
+<P>•Syntax: .BOARDOUTLINE  “class name”   “subclass name” </P>
+
+<P>•Example: .BOARDOUTLINE      “BOARD GEOMETRY”      “BD_OUTLINE” </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Identifies the default Primary Component Outline layer by “class” and “subclass layer name.”</P>
+
+<P>•Syntax: .COMPOUTLINE  “class name”  “sublclass name” </P>
+
+<P>•Example: .COMPOUTLINE     “PACKAGE GEOMETRY”        “ASSEMBLY_TOP”</P>
+
+<P><B>.COMPHEIGHT</B></P>
+
+<P>If text is found on layer identified by “class” and “subclass layer name,” the text is converted to component height attribute.</P>
+
+<P>• Syntax:  .COMPHEIGHT  “class name”  “sublclass name” </P>
+
+<P>•Example: .COMPHEIGHT     “PACKAGE GEOMETRY”     “PLACE_BOUND_TOP” </P>
+
+<P><B>.PANELGRAPHIC</B></P>
+
+<P><B>.MIRRORLAYER</B></P>
+
+<P>Establishes default mirror layering.</P>
+
+<P>•Syntax: .MIRRORLAYER     layer to be mirrored       mirrorlayer </P>
+
+<P>•Example: .MIRRORLAYER       SOLDERMASK_TOP   SOLDERMASK_BOTTOM </P>
+
+<P><B>.USEPINNAME</B></P>
+
+<P>Toggles whether pinnames are unique.</P>
+
+<P>•Syntax:  .USEPINNAME   y/n </P>
+
+<P>•Example:   .USEPINNAME    n </P>
+
+<P><B>.CLASS_2_COMPATTR</B></P>
+
+<P>Ignores graphic elements; converts graphic data into real component attributes.</P>
+
+<P>•Syntax:   .CLASS_2_COMPATTR    “class name” </P>
+
+<P>•Example:  .CLASS_2_COMPATTR    “TOLERANCE” </P>
+
+<P><B>.ComponentSMDrule</B></P>
+
+<P>Based on a set of rules, identify which components should be flagged as SMD in the “technology” section of the .CCM file.</P>
+
+<P>•Syntax:  .ComponentSMDrule    rulenumber </P>
+
+<P>•Example:  .ComponentSMDrule  1 </P>
+
+</BODY>
+</HTML>

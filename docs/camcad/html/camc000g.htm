@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  <B>Aperture Read</B></P>
+
+<P><B><U><IMG SRC="../images/bm4.gif" ALT="" BORDER=0></U></B><B><U>Working With Apertures</U><U><BR>
+</U><U>Advanced Macro File Tips</U></B><BR>
+<B><U>Automatic Macro File Generation</U></B><BR>
+<B><U>Tools &gt; Aperture List</U></B></P>
+
+<P><B>File &gt; Import &gt; Aperture Read</B></P>
+
+<P>When you import standard Gerber files, you often need to read in an aperture list to define the apertures in your files. This is easily accomplished in CAMCAD using the aperture reader. With a Gerber file(s) displayed on your screen:</P>
+
+<P>1.Select <B>File &gt; Import</B>. </P>
+
+<P>2.From the available list of options in the left window, select <B>Aperture Read,</B> then click <B>OK</B>.</P>
+
+<P>3.The Aperture Smart Reader dialog box appears. Select the macro file used to read in your aperture file, then click <B>OK</B>. </P>
+
+<P><B>Note</B></P>
+
+<P>The macro file is necessary because different applications create aperture files that are in different formats. There can be very noticable differences between aperture files from different applications, and CAMCAD needs a way to sort through these differences.</P>
+
+<P>Macro files can be created to be specific to one kind of aperture file, or they can be made more general to read in aperture files from different systems. The macro file displayed in the <B>Aperture Smart Reader</B> dialog box is default.mac. This is a large, general macro file that will work for many different kinds of aperture file formats. If you do not get the results you want with default.mac, CAMCAD is shipped with other macro files you can try (click on the button with three periods that is located next to the text entry box, and browse to find other .mac files). For the sample Gerber files use default.mac.</P>
+
+<P>4.The <B>Open</B> dialog box appears. Browse to the aperture file you want to read in. Click <B>OK</B>. (For example, go to Samples\Gerber\aperture.gap).</P>
+
+<P>5.A window displays the success or failure of reading the aperture list. If this window appears blank, or only one or two apertures are defined, click <B>Reject</B> and repeat the process, using another macro file to read in the aperture file. (For example, using default.mac and the aperture file aperture.gap, all the apertures become defined.) Click <B>Accept</B>. </P>
+
+<P>The apertures are now defined. </P>
+
+</BODY>
+</HTML>

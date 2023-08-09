@@ -1,0 +1,28 @@
+;-----------------------------------------------------------------------
+;
+; .v command = acceptable range
+;
+; All .v commands are of the following format.
+;
+; .v:type_id  max_len  acceptable_charaters  substitute_preface
+;
+; p = padstack (PadStackName)
+; s = symbol (VB99 Cell Name)
+; c = component (RefDes)
+; n = netname (netname)
+; d = pin (PinName)
+; e = device (PartNumber/Label/Name)
+;
+.v:p  64   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+?/.>,<:'"[{]}|=*&^%$#@`~      PAD
+.v:s  64   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+?/.>,<:'"[{]}|=*&^%$#@`~      SYM
+.v:c  32   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+?/.>,<:'"[{]}|=)(*&^%$#@`~    COMP
+.v:n  64   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+?/.>,<:'"[{]}|=)(*&^%$#@`~    NET
+.v:d  32   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_+?/.>,<:'"[{]}|=)(*&^%$#@`~    PIN
+.v:e  32   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+?/.>,<:'"[{]}|=)(*&^%$#@`~    DEVICE
+;
+; Substitute
+;.s
+; Partial Substitue
+;.x
+;
+

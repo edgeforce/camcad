@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P><B>$#Read Modules : DXF</B></P>
+
+<P><B>File &gt; File Import &gt; DXF Read</B></P>
+
+<P>See also: <U>File &gt; File Export &gt; DXF Write</U></P>
+
+<P><B><U>DXF Information:</U></B> </P>
+
+<P>Imports DXF files from several different sources, including Autocad R12, R13, and R14. Depending on the application generating the DXF file, you may want to modify certain file parameters upon import to CAMCAD. These import parameters are clarified below. </P>
+
+<P><B><U>DXF Import Parameters:</U></B></P>
+
+<P>When you import your DXF file with <B>File &gt; File Import &gt; DXF Read</B>, you will have the ability to modify the DXF import parameters. Usually the default options are fine to use, however there will be times that you may wish to alter the standard settings. The DXF Format dialog box is detailed below:</P>
+
+<P><IMG SRC="../images/bm169.gif" ALT="" BORDER=0></P>
+
+<P><I>The DXF Format Dialog</I></P>
+
+<P><B>•Scale:</B> Defines the import scale of your file. An entry of 1 equates to a normal 1:1 view, an entry of 2 equates to a 2:1 import, and so on.</P>
+
+<P><B>•Units:</B> Allows you to view or modify the units of measurement for your file. You should pick the unit type that was used to create your file. </P>
+
+<P><IMG SRC="../images/bm1.gif" ALT="" BORDER=0><I></I><B>Note:</B> The import units may be different than the display units, so that you can accurately import multiple files with different units of measurement and display them all in one common window with one standard unit of measurement. </P>
+
+<P><B>•Layer Name Prefix:</B> When importing multiple files into the same project window, it may be helpful to assign a unique layer name prefix to each particular file. For example, if you set the prefix to "1,” each layer in that file will have their name prefixed with the number 1. </P>
+
+<P><B>•Proportional Text:</B> Toggles whether your text is imported as proportional or non-proportional. Proportional text will allocate different amounts of space per printed character to achieve a natural looking type, while non-proportional text will give a fixed, set amount of space per character. Users typically choose to leave this option toggled on.</P>
+
+<P><B>•Convert Circles To Apertures:</B> Upon import, this option gives the ability to convert your DXF circles to apertures. These new round apertures will retain the width of the original circle, and may be modified in the aperture list. This option is very useful when importing a DXF file to translate to Gerber or Gerber-x format. </P>
+
+<P><B>•Convert Donuts To Apertures:</B> Like the above option, this will convert your DXF donuts to apertures that retain the donut outer diameter as the width.</P>
+
+<P><B>•Fill Closed Zero-Width Polylines:</B> CAMCAD reads in the DXF file, and any zero-width closed polylines will be filled. This checkbox causes <I>all</I> polylines meeting the criteria to be imported as filled — there is no option for individual polyline fills in the DXF import dialog. Refer to <U>Query &gt; Query/Edit Entity &gt; Poly Query</U> for information on individual polyline fills.</P>
+
+<P><B>•Polyline Ends - Round, Square, Endcap:</B> These helpful toggles allow you to import your file with differing polyline end types. The round and square options keep the line extents, while the endcap option will end the line with a square but without line extents.</P>
+
+</BODY>
+</HTML>

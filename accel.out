@@ -1,0 +1,13 @@
+; 
+! CAMCAD                        
+! Router Solutions Incorporated 
+! For questions please E-mail tech@rsi-inc.com
+;
+; ACCEL.OUT
+;
+
+; In degrees, which an arc/circle gets converted to polylines.
+.ARCSTEPANGLE	10
+; 
+; End
+

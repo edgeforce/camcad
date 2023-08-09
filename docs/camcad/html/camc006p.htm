@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Globally Assigning Part Attributes</H4>
+
+<H4>You can globally assign a part attribute (not to be confused with keyword mappings) using the Navigator. When changing attributes on a global part, you must refresh the database so that all of the same parts inherit the change. </H4>
+
+<P><IMG SRC="../images/bm1.gif" ALT="" BORDER=0><B></B>The figures in this section use the “terminal” part with REFDES E200 and E201 in the neutral.cc file.</P>
+
+<P>1.Select <B>Tools &gt; Navigator</B>. </P>
+
+<P>2.In the <B>Navigator</B> dialog box, expand the Geometry folder.</P>
+
+<P>3.Scroll to locate the desired geometry (for example, “terminal”) and select it.</P>
+
+<P>4.Click <B>Edit Attributes</B>. The <B><U>Attributes</U></B> dialog box appears.</P>
+
+<P>5.Select <B>Add</B>. The <B>Edit Attributes</B> dialog box appears. </P>
+
+<P>6.In the Keyword field enter <B>TEST</B>, then click <B>OK</B>.</P>
+
+<P>7.The attribute TEST now appears in the <B>Attributes</B> dialog box. Click <B>Done</B>.</P>
+
+<P><B>To update the global attribute inheritance:</B></P>
+
+<P>1.Select <B>Tools &gt; PCB &gt; Find/Pan Component</B>. A <B>Pan to Reference Designator</B> dialog box appears.</P>
+
+<P>2.Enter E200, then click <B>OK</B>. The terminal E200 will be colored on the PCB drawing.</P>
+
+<P>3.Click <B>Tools &gt; Refresh Attribute Inheritance</B>.</P>
+
+<P><IMG SRC="../images/bm1.gif" ALT="" BORDER=0>You must do a Refresh Attribute Inheritance for the new attributes to be applied to all of instances of the geometry.</P>
+
+<P>4.Click <B>Query &gt; Edit Entity</B>. The <B>Insert</B> dialog box appears.</P>
+
+<P>5.Select the <B>E200</B> and <B>E201</B> parts and verify that the attribute <B>TEST</B> was inherited and added to the <B>Keyword</B> list.</P>
+
+<P><IMG SRC="../images/bm1.gif" ALT="" BORDER=0>Changes made to individual parts are immediately inherited.</P>
+
+</BODY>
+</HTML>

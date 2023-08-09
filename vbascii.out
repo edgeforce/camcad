@@ -1,0 +1,15 @@
+; 
+! CAMCAD                        
+! Router Solutions Incorporated 
+! For questions please E-mail tech@rsi-inc.com
+;
+; VB99.OUT
+;
+; *****You must set all values to mils or millimeter ****;
+; Mils or Millimeter allowed.  
+; .OUTPUT_UNIT_STRING	Millimeter
+.OUTPUT_UNIT_STRING	Mils
+.OUTPUT_UNIT_ACCURACY	3
+;
+; End
+

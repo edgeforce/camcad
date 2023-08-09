@@ -1,0 +1,72 @@
+;
+; VBASCII.IN
+;
+; VBASCII layer assign.
+;	"UNKNOWN GRAPHIC",
+;	"SIGNAL TOP",		// component layer
+;	"SIGNAL BOTTOM",	// solder layer
+;	"SIGNAL INNER",	// inner layer - number is from stackup
+;	"SIGNAL ALL",		// all layer 
+;	"DIELECTRIC",		// dielectric layer
+;	"PAD TOP",			// pad top layer
+;	"PAD BOTTOM",		// no param
+;	"PAD INNER",		// no param
+;	"PAD ALL",		// no param
+;	"PAD THERMAL",		// no param
+;	"PASTE TOP",
+;	"PASTE BOTTOM",
+;	"SOLDERMASK TOP",
+;	"SOLDERMASK BOTTOM",
+;	"SILKSCREEN TOP",
+;	"SILKSCREEN BOTTOM",
+;	"POWER NEGATIVE",	// no param, power layer
+;	"POWER POSITIVE",	// no param, power				
+;	"SPLIT PLANE",		// no param, split plane					
+;	"GENERIC SIGNAL",	// generic signal, only for use if nothing is known except it is a signal layer
+;	"SOLDERMASK ALL",
+;	"PASTEMASK ALL",
+;	"REDLINE",
+;	"DRILL",
+;	"GENERIC TOP",		// this is for top and bottom view
+;	"GENERIC BOTTOM",	// same
+;	"GENERIC ALL",
+;	"BOARD OUTLINE",
+;	"PAD OUTER",
+;	"SIGNAL OUTER",
+;
+;
+.UNNAMEDNET     $$
+;
+; Always force the testpad definition to top in the cel file.
+;.TESTPAD        TOP
+;
+;
+; Use fanout vias from the Cell definition. This may lead to
+; duplications in the layout.hkp file.
+.USE_CELL_FANOUT_VIAS	y
+;
+; This is the primary component outline
+.COMPOUTLINE	ComponentOutline
+;
+; Drawing cells will be translated from the 
+; layout.hpk if explode_drawing_cell is set to y.
+.EXPLODE_DRAWING_CELL	y
+;
+; in VB99 output, the padstack units seems to be always TH even
+; if the .UNIT statement says different.
+.CORRECT_PADSTACKUNITERROR	y
+;
+; Here is either "netprops.hkp" file or a keyin netlist format.
+.NETLISTSOURCE	netprops.hkp
+;
+; GENERATED_DATA section in Veribest is the linedraw of every fill.
+; For Translator, use Generated data should be set to N
+.USE_GENERATED_DATA	n
+;
+; Padstacks can be defined in multiple technologies. Only one technology 
+; can be used. The default technology is "(Default)".
+.USETECHNOLOGY "(Default)"
+;
+; This maps CAD attributes to internal attributes
+.ATTRIBMAP      TOL		TOLERANCE
+;

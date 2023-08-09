@@ -1,0 +1,12 @@
+; This is for Generic RSI test output
+
+; do unused nets			
+.UNUSEDNET	   y
+
+; Name of unused net
+.UNUSEDNETNAME	UNUSED
+
+; output vias
+.TESTVIA	   y
+
+; end

@@ -1,0 +1,24 @@
+; GENCAM.OUT
+;
+; The output accuracy is taken from Settings inside CAMCAD. This can
+; overwrite this settings.
+;.OUTPUT_UNIT_ACCURACY	3
+;
+; Typemapping  CAMCAD Type 	GENCAM TYPE
+.TYPEMAP   CAPACITOR		CAP
+.TYPEMAP   COIL			COIL     			
+;
+;-----------------------------------------------------------------
+;Outline Routine
+;
+; Show will create a outline on a layer DEBUG, when running GENCAM output.
+.SHOWOUTLINE y
+;
+;-----------------------------------------------------------------
+; Default mandatory settings
+;
+.CONTINUITY_VOLTAGE	5
+.CONTINUITY_CURRENT	.9
+.ISOLATION_VOLTAGE	10
+;
+; end

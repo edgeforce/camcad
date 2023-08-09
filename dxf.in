@@ -1,0 +1,30 @@
+;
+;
+; New Text line width options for DXF read
+; TextLinewidth for all text width units
+; TextLinewidth by Height Ratio in percent
+; TextLinewidth by Text  min max width units
+;			
+; .TEXTLINEWIDTH  0.01 inch <= not yet implemented.
+; or
+.TEXTLINERATIO	10
+; or
+; .TEXTLINERANGE	0 0.1 0.01 inch	<= not yet implemented.
+;
+; This is the ration of text height to width.
+.TEXTWIDTHRATIO	0.8
+;
+; Filter PARITY BIT. 
+.PARITYBIT	n
+;
+; Check for closed polylines, even that the closed flag
+; is not set in DXF.
+; .AUTOCLOSE y = default.
+.AUTOCLOSE	n
+;
+; Acad color  0-255  	Windows 255,255,255 color
+.COLORREF	40	12 15 18
+;
+; Display log file
+.DISPLAYLOG               n
+;

@@ -1,0 +1,80 @@
+:Base CAMCAD.HLP
+:Title CAMCAD General Help
+1 Getting Started
+2 Overview
+3 What is CAMCAD?=What_is_CAMCAD_
+3 User Interface=User_Interface
+3 Enabling Commonly-Used Toolbars=Enabling_Commonly_Used_Toolbars
+3 About CAMCAD Modules & Editions=About_CAMCAD_Modules@camcad.HLP>main
+3 Help On Help=Help_On_Help@camcad.HLP>main
+2 File and Database Basics
+3 Command File Import=Command_File_Import
+3 Command File Export=Command_File_Export
+3 Working With Files=Working_With_Files@camcad.HLP>main
+3 Command File Save Data File As=Command_File_Save_Data_File_As
+3 Command File Load Data File As=Command_File_Load_Data_File_As
+2 Installing and Starting CAMCAD
+3 System Requirements=System_Requirements
+3 Installing the Software=Installing_the_Software
+3 Entering Access Codes=Entering_Access_Codes
+3 Access Code Problems=Access_Code_Problems
+3 Starting CAMCAD=Starting_CAMCAD
+3 Additional Information
+4 Single User VS Network Setups=Single_User_VS_Network_Setups@camcad.HLP>main
+4 CAMCAD Shareware vs Full Release=CAMCAD_Shareware_vs_Full_Release
+4 Uninstallation=Uninstallation
+1 Importing Data
+; next level + 1
+1 Basic Steps - Importing=Basic_Steps___Importing
+2 Importing A Sample Gerber File=Importing_A_Sample_Gerber_File@camcad.HLP>main
+2 Import Modules
+; next level + 1
+2 Import Module: Accel=Import_Module__Accel
+3 Import Module: Allegro=Import_Module__Allegro
+3 Import Module: CADIF=Import_Module__CADIF
+3 Import Module: Mentor BoardStation=Import_Module__Mentor_BoardStation
+3 Import Module: Mentor Neutral=Import_Module__Mentor_Neutral
+3 Import Module: OrCAD=Import_Module__OrCAD
+3 Import Module: PADS=Import_Module__PADS
+3 Import Module: PCAD=Import_Module__PCAD
+3 Import Module: Protel=Import_Module__Protel
+3 Import Module: Veribest=Import_Module__Veribest
+1 Manipulating Data
+; next level + 1
+1 Deleting Non-Electrical Items=Deleting_Non_Electrical_Items
+2 Deleting Non-Useful Traces=Deleting_Non_Useful_Traces
+2 Ensuring Correct Attribute Data=Ensuring_Correct_Attribute_Data
+2 Viewing and Selecting a Device=Viewing_and_Selecting_a_Device
+2 Mirror/Rotate the PCB=Mirror_Rotate_the_PCB
+2 Importing and Printing HPGL Files=Importing_and_Printing_HPGL_Files
+2 Locating a Specific Part or Position on the PCB=Locating_a_Specific_Part_or_Position_on_the_PCB
+2 Working With Attributes
+3 Viewing Component Attributes Via Query=Viewing_Component_Attributes_Via_Query
+3 Viewing Component Attributes Via Navigator=Viewing_Component_Attributes_Via_Navigator
+3 Editing, Adding, or Deleting Attributes=Editing__Adding__or_Deleting_Attributes
+3 Globally Assigning Part Attributes=Globally_Assigning_Part_Attributes
+3 Mapping Attributes=Mapping_Attributes
+; next level + 1
+1 Editing the Keyword Map=Editing_the_Keyword_Map
+2 Selecting, Adding, and Editing Entities
+3 Selecting Entities=Selecting_Entities
+3 Adding New Entities=Adding_New_Entities
+3 Editing Entities=Editing_Entities
+3 Polyline Display Rules=Polyline_Display_Rules
+; next level + 1
+1 Working With Layers=Working_With_Layers
+2 Working With Apertures=Working_With_Apertures
+2 Aperture Macro Generator=automatic_macro_file_generation@camcad.HLP>main
+2 Working With Geometries=Working_With_Geometries
+2 Working With Netlists=Working_With_Netlists
+1 Exporting Data
+2 Basic Steps - Exporting=Basic_Steps___Exporting
+2 Export Modules=Export_Modules
+1 Command Reference
+2 Menu Commands=Menu_Commands
+2 Toolbars=Toolbars
+2 CAMCAD Hotkeys=CAMCAD_Hotkeys@camcad.HLP>main
+1 Frequently Asked Questions
+2 Top Ten Frequently Asked Questions=Top_Ten_Frequently_Asked_Questions@camcad.HLP>main
+1 For More Information
+2 Contacting RSI=Contacting_RSI

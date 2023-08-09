@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#K<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Mentor BoardStation</H4>
+
+<P>CAMCAD Read/Import NameR-MENA</P>
+
+<P>Full CAD Format NameMentor Boardstation (4 File ASCII), Fablink</P>
+
+<P>Supported VersionsV. 8.2, 8.4</P>
+
+<P>Hardware PlatformSUN, HP</P>
+
+<P>Operating SystemUNIX</P>
+
+<P>Database ClassPin: Connections must be made in a pin-to-pin manner. “T” connections are created by doubling back onto an existing section of a trace to give the visual appearance of a “T” connection. This class usually has very stringent rules that must be followed for trace routing and via placement.</P>
+
+<P>Board Outline ClassReal: Board outlines in this CAD format are true board outline entities. CAMCAD supports true board outlines.</P>
+
+<P>Component ClassLibrary: Library driven CAD systems have a component library section within the CAD data which defines all components.</P>
+
+<P><B>Importing Mentor Boardstation into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import</B></P>
+
+<P>1. ascii_geometries: Definitions for all library elements in the design including board outline, panel definition, layer stack-up.</P>
+
+<P>2. comps.comps_*: Component file, which is called in the Mentor system comps.comp.$x. This file has the component placement information, as well as reference designator, part number, and package.</P>
+
+<P>3. nets.nets_*: Netlist file, which is called in the Mentor system nets.net.</P>
+
+<P>4. traces.traces_*: Trace or Wire file, which is called traces.trace. This file has all the via, routing and filled area information.</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>Only the ascii_geometries file needs to be saved in a special way, the other three files are in the standard Mentor format.</P>
+
+<P>1. In Mentor Librarian select LOAD &gt; PART FILE File &gt; SAVE &gt; GEOMETRY ASCII &gt; To Single File.</P>
+
+<P>2. The standard Mentor names for the other files needed are as follows:</P>
+
+<P>•comps.comps_*</P>
+
+<P>•traces.traces_*</P>
+
+<P>•nets.nets_*</P>
+
+<P>Where * represents the highest number found for the file name specified.</P>
+
+<P><B>Notes On File Generation</B></P>
+
+<P>Be sure to select the proper options to save all parts into a single ASCII file with a .PRT extension. </P>
+
+<P>Import the geometry file into CAMCAD.  After it is loaded in, you can group select and load in the other three files all at once.</P>
+
+<P><B>Items controlled by the Mentor4.IN file</B></P>
+
+<P><B>.BOARDOUTLINE</B></P>
+
+<P>Sets the default layer which is the Primary Board Outline</P>
+
+<P>•Syntax:  .BOARDOUTLINE  “layername” </P>
+
+<P>•Example:  .BOARDOUTLINE  “BOARD_OUTLINE” </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Sets the default layer which is the Primary Component Outline</P>
+
+<P>•Syntax: .COMPOUTLINE    “layername” </P>
+
+<P>•Example:  .COMPOUTLINE   “COMPONENT_PLACEMENT_OUTLINE” </P>
+
+<P><B>.TYPEATTR</B></P>
+
+<P>This command identifies attributes which are defined in the TYPEATT section that should be assigned to components.</P>
+
+<P><B>.HEIGHTATTR</B></P>
+
+<P>Sets the default attribute name which identifies the true component height; also assigns the default units.</P>
+
+<P>•Syntax:  .HEIGHTATTR    attribute name        units </P>
+
+<P>•Example:  .HEIGHTATTR      HEIGHT       IN </P>
+
+<P><B>.MIRRORLAYER</B></P>
+
+<P>Establishes default layer mirroring.</P>
+
+<P>•Syntax:  .MIRRORLAYER     [layer to be mirrored]     [mirror layer name] </P>
+
+<P>•Example:  .MIRRORLAYER    SOLDER_MASK_1        SOLDER_MASK_2 </P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#Network Tips: Installation/Setup</H4>
+
+<P><B>Network Setups: (<I>Note</I></B> - You <I>must</I> have the CAMCAD Network File to perform a network installation of CAMCAD) The CAMCAD network setup installs extra network-related files and directories, like the Setupusr and License directories. These extra files make it possible for CAMCAD to function in a networked environment, using a floating license scheme to allow multiple end users to launch and run CAMCAD. Our file based network installation operates completely independent of network type. This allows CAMCAD to be installed on Win NT, Novel, LanTastic, etc...based networks without requiring specialized setup configurations.</P>
+
+<P><B>Network Server Installation:</B>In a network setup, you first install the CAMCAD package to a directory on the server machine using the Network Server option in the install. The <B>CAMCAD Network Directory</B>, chosen during the installation, will be the location of the shared executable. This network directory should be one that is accessible to all end users (e.g. network drive or shared drive with correct permissions - read/write permissions are necessary for the CAMCAD Network Directory and all sub-directories). This directory will contain the executable and all other necessary files, including the end user setup executable.</P>
+
+<P><B>User/Local Client Installation: </B>From the end-user's machine, navigate to the CAMCAD Network Directory, then the setupusr.xxx subdirectory. Launch <B>setupusr.exe </B>to setup a local copy of CAMCAD. The setupusr.exe installation will create a <B>CAMCAD Local Directory</B> on the end-user's local drive which will store the local user's personalized settings and licenses. The After running setupusr.exe to install the local copy of CAMCAD, the network administrator must enter the access codes issued to the company for each end user.</P>
+
+<P><B>Tip</B></P>
+
+<P>After entering the access codes for the local user of CAMCAD, a password may be established at that machine to prevent the altering of the access codes. Review the CAMCAD Help Reference entry <B><U>Settings &gt; Change Admin Password</U></B> for further information.</P>
+
+<P>After the access codes are entered in, you should see the words <B>FULL ACCESS</B> next to the module name. However, you may see the words <B>UNAVAILABLE</B> next to a module name. This means that the access code is entered in correctly, but all the available licenses are checked out. If this is the case, you must wait for another end user to quit running CAMCAD before running it yourself. </P>
+
+<P><B>Tips</B></P>
+
+<P>Sometimes you will see <B>UNAVAILABLE</B> even though you have enough licenses to run CAMCAD - it may be necessary to 'reset' the internal CAMCAD license file. Make sure nobody is running CAMCAD, and launch the file called resetnet.exe located in the CAMCAD root directory. This small program quickly resets the internal variables in the CAMCAD network file, and restores all licenses to their maximum limit. </P>
+
+<P>To view the current status of your license file, to determine how many licenses you have for each module and how many are currently checked out, you can run the ccnetmon.exe program.</P>
+
+<P></P>
+
+</BODY>
+</HTML>

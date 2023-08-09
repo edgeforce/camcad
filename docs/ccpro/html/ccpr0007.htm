@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  <U>CAMCAD - Professional Edition</U></H1>
+
+<H2>· Allegro EDA PCB Reader</H2>
+
+<P>Cadence Allegro files have the default extension .brd. These binary files must be first "extracted" into ASCII files, before loading into CAMCAD. The extract is a program in the Allegro System and must be executed using the CAMCAD "valext.txt" file. The CAMCAD Allegro reader is user definable and adapts automatically to add-ons and changes in the extract file. However, the beginning records of the extract file must stay identically. The user can change the attribute section of the extract file.</P>
+
+<P>"valout.txt" example as supplied with CAMCAD:</P>
+
+<P>#</P>
+
+<P># VALID ALLEGRO OUTPUT SCRIPT FOR ROUTER SOLUTIONS SOFTWARE</P>
+
+<P>#</P>
+
+<P># This Script creates 4 files : BRD.TXT PAD.TXT SYM.TXT RTE.TXT</P>
+
+<P>#</P>
+
+<P># This is the new modified version May 92. (Router Solutions Inc.)</P>
+
+<P># This is the new modified version APR 94. (Router Solutions Inc.)</P>
+
+<P>#Component values, partnumber and type was added.</P>
+
+<P>#</P>
+
+<P># This is the new modified version MAY 94. (Router Solutions Inc.)</P>
+
+<P>#               Pin Rotation was added. This only work from </P>
+
+<P>#               Allegro version 6.</P>
+
+<P>#</P>
+
+<P># This is the new modified version JUN 94. (Router Solutions Inc.)</P>
+
+<P>#               Test point was added.</P>
+
+<P>#</P>
+
+<P># This is the new modified version DEC 96 (Router Solutions Inc.)</P>
+
+<P>#User properties added.</P>
+
+<P># Board section was never used. Exchange it for Layer information</P>
+
+<P>#BOARD</P>
+
+<P>#BOARD_NAME</P>
+
+<P>#BOARD_UNITS</P>
+
+<P>#BOARD_EXTENTS_X1</P>
+
+<P>#BOARD_EXTENTS_Y1</P>
+
+<P>#BOARD_EXTENTS_X2</P>
+
+<P>#BOARD_EXTENTS_Y2</P>
+
+<P>#BOARD_LAYERS</P>
+
+<P>#END</P>
+
+<P>LAYER</P>
+
+<P>LAYER_SORT</P>
+
+<P>LAYER_SUBCLASS</P>
+
+<P>LAYER_ARTWORK</P>
+
+<P>LAYER_USE</P>
+
+<P>LAYER_CONDUCTOR</P>
+
+<P>LAYER_DIELECTRIC_CONSTANT</P>
+
+<P>LAYER_ELECTRICAL_CONDUCTIVITY</P>
+
+<P>LAYER_MATERIAL</P>
+
+<P>LAYER_SHIELD_LAYER</P>
+
+<P>LAYER_THERMAL_CONDUCTIVITY</P>
+
+<P>LAYER_THICKNESS</P>
+
+<P>END</P>
+
+<P>PAD_DEF</P>
+
+<P>END</P>
+
+<P>GEOMETRY</P>
+
+<P># GENERATES PLACEMENT, SYMBOL, AND ETCH INFORMATION</P>
+
+<P>SYM_TYPE</P>
+
+<P>SYM_NAME</P>
+
+<P>REFDES</P>
+
+<P>SYM_X </P>
+
+<P>SYM_Y</P>
+
+<P>SYM_ROTATE</P>
+
+<P>SYM_MIRROR</P>
+
+<P>NET_NAME  </P>
+
+<P>CLASS</P>
+
+<P>SUBCLASS</P>
+
+<P>RECORD_TAG</P>
+
+<P>GRAPHIC_DATA_NAME</P>
+
+<P>GRAPHIC_DATA_NUMBER</P>
+
+<P>GRAPHIC_DATA_1</P>
+
+<P>GRAPHIC_DATA_2</P>
+
+<P>GRAPHIC_DATA_3</P>
+
+<P>GRAPHIC_DATA_4</P>
+
+<P>GRAPHIC_DATA_5</P>
+
+<P>GRAPHIC_DATA_6</P>
+
+<P>GRAPHIC_DATA_7</P>
+
+<P>GRAPHIC_DATA_8</P>
+
+<P>GRAPHIC_DATA_9</P>
+
+<P>GRAPHIC_DATA_10</P>
+
+<P>COMP_DEVICE_TYPE</P>
+
+<P>COMP_PACKAGE</P>
+
+<P>COMP_PART_NUMBER</P>
+
+<P>COMP_VALUE</P>
+
+<P># User Attributes are added here</P>
+
+<P>BARCODE</P>
+
+<P>BOARD_FIDUCIAL</P>
+
+<P>BOARD_TOOLING</P>
+
+<P>BREAKAWAY</P>
+
+<P>CUTOUT</P>
+
+<P>PANEL_FIDUCIAL</P>
+
+<P>PANEL_TOOLING</P>
+
+<P>ROBBER_BAR</P>
+
+<P>CLIP_DRAWING </P>
+
+<P>END</P>
+
+<P>COMPOSITE_PAD</P>
+
+<P># GENERATES VIA AND NETLIST INFORMATION</P>
+
+<P># from here on down, these are user attributes and are optional</P>
+
+<P>NET_NAME</P>
+
+<P>PIN_NUMBER_SORT </P>
+
+<P>CLASS</P>
+
+<P>REFDES</P>
+
+<P>SYM_TYPE</P>
+
+<P>SYM_NAME</P>
+
+<P>SYM_X</P>
+
+<P>SYM_Y</P>
+
+<P>SYM_ROTATE</P>
+
+<P>SYM_MIRROR</P>
+
+<P>PIN_NAME</P>
+
+<P>PIN_NUMBER</P>
+
+<P>PIN_X</P>
+
+<P>PIN_Y</P>
+
+<P>PAD_STACK_NAME</P>
+
+<P>VIA_X</P>
+
+<P>VIA_Y</P>
+
+<P># for Version 6</P>
+
+<P>PIN_ROTATION</P>
+
+<P>TEST_POINT    </P>
+
+<P>NET_PROBE_NUMBER</P>
+
+<P>END</P>
+
+<P># End of VALOUT.SCR</P>
+
+<P>================= end of example</P>
+
+<P>Allegros extract program will return an error message, if you try to extract non-existant attributes.</P>
+
+<P>How to run extract:</P>
+
+<P>extract</P>
+
+<P>&lt;enter brd file name&gt;: your_file_name</P>
+
+<P>&lt;enter .txt extract script&gt; : valout.txt //  will need 4 files, hit return on the fifth.</P>
+
+<P>&lt;enter filename&gt; : brd.txt</P>
+
+<P>&lt;enter filename&gt; : pad.txt</P>
+
+<P>&lt;enter filename&gt; : sym.txt</P>
+
+<P>&lt;enter filename&gt; : rte.txt</P>
+
+<P>&lt;enter filename&gt; : &lt;return&gt;// no file name</P>
+
+<P>Now the program will execute. Check extract.log for error messages.</P>
+
+<P>The loading of the Allegro files can be in any order, or in simultanious selection.</P>
+
+<P>.MIRRORLAYER in ALLEGRO.IN</P>
+
+<P>In the extraced files, all components are exploded. This means every instance of a 1206 Resitor (R1,R2,R3) has its own library definition. CAMCAD rebuilds a library from the exploded data. Therefore the first instance of a shape becomes the master, from which all other instances are derived. To rebuild the mirrored shapes correctly, CAMCAD looks into the .MIRRORLAYER in the ALLEGRO.IN to "unmirror" layers. </P>
+
+<P>File load sequence:</P>
+
+<P>The 4 script files can be loaded in any sequence, however to correctly update BOARD_FIDUCIAL and PANEL_FIDUCIAL, it is important that the .s file (3rd file from extract) is loaded before the .r (4th file from extract). Only this guaranties that the FIDUCIAL of the pins are updated correctly with the symbol inserts.</P>
+
+<P>SMD pad recognition:</P>
+
+<P>A pad is flagged to be SMD if no drill diameter is set.</P>
+
+<P>SMD component recognition:</P>
+
+<P>SMD componenets are recognized like in CCMout. See SMD rule flag</P>
+
+<P>in ALLEGRO.IN.</P>
+
+<P>PADFORM SHAPE (complex outline) is read in as a Rectangle with X and Y size as defined in the extract file.</P>
+
+</BODY>
+</HTML>

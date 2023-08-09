@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  Mirror/Rotate the PCB</H4>
+
+<P><IMG SRC="../images/bm199.gif" ALT="" BORDER=0><B></B>Currently, the surface access called out in the board_XY file does not represent the mirrored PCB. This will be rectified in the next release.</P>
+
+<P>When the PCB design database is imported into CAMCAD, it is oriented the same as it was in the original CAD system.  This orientation may not be ideal for viewing or fixturing. CAMCAD lets you rotate and mirror the PCB.  </P>
+
+<P><B>To rotate or mirror the PCB:</B></P>
+
+<P>1.Choose <B>Tools &gt; File</B> List. The File List dialog box appears.</P>
+
+<P>The File List dialog box displays all currently loaded files. In some cases a single CAD database may yield multiple files within CAMCAD.  </P>
+
+<P>2.Using the mouse, select the file that represents the PCB design, then click <B>Modify</B>. The Edit File Placement dialog box appears:</P>
+
+<P><IMG SRC="../images/bm203.gif" ALT="" BORDER=0></P>
+
+<P><I>The Edit File Placement Dialog</I></P>
+
+<P>3.Rotate and/or mirror the board:</P>
+
+<P>a.To rotate the PCB, enter a new rotation angle in the Rotation field.  </P>
+
+<P>For HP3070 fixturing it is s<I>trongly recommended</I> to keep the principle axis of the PCB in alignment with the principle axis of a test fixture (normally in 90 degree increments). Normally, the rotation is applied counter clockwise about the origin of the PCB.  To rotate clockwise, use a negative value in the rotation field.  </P>
+
+<P>b.To mirror the board, check the <B>Mirror</B> check box.</P>
+
+<P>CAMCAD allows a file to be mirrored in the y-axis only. However, by using a combination of mirroring and rotation, a flip in both the x-axis and y-axis can be achieved. </P>
+
+<P><B>Tip</B></P>
+
+<P>If a mirror in both the x and y- axes is desired, simply check the <B>Mirror</B> check box and apply a rotation of 180 degrees.</P>
+
+<P>c.Click <B>OK</B>.</P>
+
+<P>d.In the File List, click either <B>Apply</B> (to keep the File List open) or <B>OK</B> (to apply rotation and close the File List).</P>
+
+<P>Once the new rotation is applied, the PCB image may no longer be visible.  </P>
+
+<P><B>To reset the page size around the new PCB location:</B></P>
+
+<P>1.Select <B>Settings &gt; Modify Settings</B>. The Setting dialog box appears:</P>
+
+<P><IMG SRC="../images/bm11.gif" ALT="" BORDER=0></P>
+
+<P><I>The Modify Settings Dialog</I></P>
+
+<P>2.Select the <B>Page</B> tab.</P>
+
+<P>3.Select <B>Fit Page to Image</B>, then click <B>OK</B>.  </P>
+
+<P>The window redraws with the entire PCB now visible.</P>
+
+</BODY>
+</HTML>

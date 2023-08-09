@@ -1,0 +1,28 @@
+;-----------------------------------------------------------------------
+;
+;The ".case_sensitive" command makes the "acceptable_charaters" strings 
+;in the commands below case sensitive. 
+.case_sensitive
+;
+; .v command = acceptable range
+;
+; All .v commands are of the following format.
+;
+; .v:type_id  max_len  acceptable_charaters  substitute_preface
+;
+; g = geometry (Blocks)
+; l = layernames
+;
+.v:g  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_  	GEOM_
+.v:l  30   ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-_  	LAY_
+;
+; Substitute
+; *MODEL_SPACE
+; *PAPER_SPACE
+.s:g:g    *MODEL_SPACE  MSPACE
+.s:g:g    *PAPER_SPACE  MPAPER
+;.s
+; Partial Substitue
+;.x
+.x:g:g	" "	"_"
+;

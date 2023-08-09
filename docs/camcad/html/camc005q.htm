@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#.STARTDEF CAM350</P>
+
+<P>;.UNITS=inch</P>
+
+<P>;.UNITS=Mil</P>
+
+<P>.UNITS=mm</P>
+
+<P>;</P>
+
+<P>; Mapping of Aperture types.</P>
+
+<P>.FORM_ROUND      ROUND</P>
+
+<P>.FORM_SQUARE     SQUARE</P>
+
+<P>;</P>
+
+<P>;.IGNORE ""            // inside bracket</P>
+
+<P>.WORDDELIMETER " "  // inside bracket</P>
+
+<P>;</P>
+
+<P>.SCANLINE .DCODE .MUST_FORM_ROUND .SKIPWORD .XSIZE .SKIPWORD .YSIZE</P>
+
+<P>.SCANLINE .DCODE .MUST_FORM_SQUARE .SKIPWORD .XSIZE .SKIPWORD .YSIZE .ENDDEF</P>
+
+<P>{button Copy to clipboard and launch Notepad.  [CTRL-V] in notepad to paste.,CT():EF(`notepad.exe',`',1)}</P>
+
+</BODY>
+</HTML>

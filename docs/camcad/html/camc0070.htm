@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#K<IMG SRC="../images/bm0.gif" ALT="" BORDER=0>  PCAD</H4>
+
+<P>CAMCAD Read/Import NameR-PCAD</P>
+
+<P>Full CAD Format NamePCAD PCB</P>
+
+<P>Supported VersionsV2-V8</P>
+
+<P>Hardware PlatformPC</P>
+
+<P>Operating SystemDOS</P>
+
+<P>Board Outline ClassPseudo: Board outlines in this CAD format are comprised of standard line elements. The CAD format does not allow for a real board outline entity.</P>
+
+<P>Component ClassLibrary: Library driven CAD systems have a component library section within the CAD data which defines all components.</P>
+
+<P><B>Importing PCAD into CAMCAD</B></P>
+
+<P><B>File(s) Used For Import</B></P>
+
+<P>.PDF (ASCII)</P>
+
+<P><B>How To Produce File(s)</B></P>
+
+<P>1.  Select PDIF OUT in the PCAD user interface. </P>
+
+<P>2.  Alternatively, from a DOS command line run, PDIFOUT -l filename.pcb.</P>
+
+<P><B>Items controlled by the Pdif.IN file</B></P>
+
+<P><B>.BOARDOUTLINE</B></P>
+
+<P>Sets the default layer for the Primary Board Outline</P>
+
+<P>•Syntax:  .BOARDOUTLINE   layername </P>
+
+<P>•Example:  .BOARDOUTLINE   BRDOUT </P>
+
+<P><B>.COMPOUTLINE</B></P>
+
+<P>Sets the default layer to find the Primary Component Outlines.</P>
+
+<P>•Syntax:  .COMPOUTLINE     layername </P>
+
+<P>•Example:  .COMPOUTLINE    SLKTOP </P>
+
+<P><B>.LAYERATTR</B></P>
+
+<P>Establishes mapping for layer attributes</P>
+
+<P>•Syntax:  .LAYERATTR     [layer attribute]     “layer name” </P>
+
+<P>•Example:  .LAYERATTR        PADTOP           “PAD TOP” </P>
+
+<P><B>.CONVERT_PADCIRCLE_2_APP</B></P>
+
+<P>Toggles whether circles in padstacks should be converted to apertures.</P>
+
+<P>•Syntax:   .CONVERT_PADCIRCLE_2_APP      y/n </P>
+
+<P>•Example:  .CONVERT_PADCIRCLE_2_APP   y </P>
+
+<P><B>.CONVERT_PADRECT_2_APP</B></P>
+
+<P>Toggles whether rectangles in padstacks should be converted to apertures.</P>
+
+<P>•Syntax:  .CONVERT_PADRECT_2_APP    y/n </P>
+
+<P>•Example:  .CONVERT_PADRECT_2_APP   y  </P>
+
+<P><B>.TYPEASSIGN</B></P>
+
+<P>Provides mapping from PCAD device (TY) to component device type.</P>
+
+<P>•Syntax:  .TYPEASSIGN    [PDIF type]    CAMCAD device type </P>
+
+<P>•Example:   .TYPEASSIGN    2    PCBCOMP </P>
+
+</BODY>
+</HTML>

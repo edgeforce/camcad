@@ -1,0 +1,33 @@
+;
+; FATF.IN
+;
+;This section allows the user to select the rules for identifing a component
+;as SMD for the keyword "technology" in the component section of the CCM file.  
+;
+;Rule #   Description
+;
+;     0   The input database must have the component flaged as SMD. 
+;
+;     1   If all pins of a component are SMD then the component is SMD.
+;
+;     2   If the majority of the pins of a component are SMD then the 
+;         component is SMD.
+;
+;     3   If at least one pin is SMD then the component is SMD.
+;
+.ComponentSMDrule   1
+;
+; Attribute FABMASTER to CAMCAD 
+; the tolerance keyword is checked for a good value.
+; allowed values are:
+; 10
+; 10%
+; +-10%
+; -+10%
+; +10%-10%
+; -10%+10%
+; -10% +10%
+; +10% -10%
+.ATTRIBMAP     	"TOL"		"TOLERANCE"
+;
+; end FATF.IN

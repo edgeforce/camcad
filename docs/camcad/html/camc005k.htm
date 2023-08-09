@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P>$#.STARTDEF       RPT2</P>
+
+<P>.UNITS=inch</P>
+
+<P>;.UNITS=Mil</P>
+
+<P>;.UNITS=mm</P>
+
+<P>;</P>
+
+<P>; Mapping of Aperture types.</P>
+
+<P>.FORM_ROUND      CIRCLE</P>
+
+<P>.FORM_SQUARE     RECTANGULAR</P>
+
+<P>.FORM_RECT       RECTANGULAR</P>
+
+<P>.FORM_OBLONG     CIRCLE</P>
+
+<P>;</P>
+
+<P>.IGNORE ""            // inside bracket</P>
+
+<P>.WORDDELIMETER " ,"  // inside bracket</P>
+
+<P>;</P>
+
+<P>; Usable keywords</P>
+
+<P>; XSIZE   </P>
+
+<P>; YSIZE</P>
+
+<P>; SKIPWORD</P>
+
+<P>; SKIPALPHA</P>
+
+<P>; DCODE</P>
+
+<P>; APNUMBER</P>
+
+<P>; FORM</P>
+
+<P>.SCANLINE .APNUMBER .DCODE .MUST_FORM_ROUND  .SKIPWORD .SKIPWORD .XSIZE .YSIZE</P>
+
+<P>.SCANLINE .APNUMBER .DCODE .MUST_FORM_SQUARE .SKIPWORD .SKIPWORD .XSIZE .YSIZE</P>
+
+<P>.ENDDEF</P>
+
+<P>{button Copy to clipboard and launch Notepad.  [CTRL-V] in notepad to paste.,CT():EF(`notepad.exe',`',1)}</P>
+
+</BODY>
+</HTML>

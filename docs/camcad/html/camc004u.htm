@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H4>$#Advanced Macro File Tips</H4>
+
+<P>See Also: <U>Automatic Macro File Generation</U></P>
+
+<P>Macro files are used in conjunction with importing aperture files. CAMCAD is shipped with several different macro files, and RSI has more macro files available on the World Wide Web site.</P>
+
+<P>Customization of macro files is sometimes necessary in order to successfully import an aperture file. When you open a macro file in a text editor, you will see the following relevant terms:</P>
+
+<P><B>**</B> Lines that begin with a period (.) are macro file commands</P>
+
+<P><B>**</B> Lines that begin with a semicolon (;) are commented out</P>
+
+<P><B>** .ASSIGN </B>= Older aperture files may not have D-Codes defined within the aperture file, but rather may have only an aperture number. The .ASSIGN command assigns D-Codes to aperture numbers. Depending on the aperture file, these lines may or may not be necessary. If they are not necessary, they can still be present within the macro file and will not influence the success of the macro file. Should you need to enter more apertures, follow the same pattern as the other .ASSIGN lines.</P>
+
+<P><B>** .STARTDEF</B> = The beginning of the macro file definition</P>
+
+<P><B>** .UNITS</B> = Units - INCH, MIL, MM</P>
+
+<P><B>** .TEXTDELIMITER</B> = Should you wish to skip an entire text section of a line in the macro file, you can designate .TEXTDELIMITERS. Common delimiters are parenthesis (), single quotes, '' and double quotes. ""</P>
+
+<P><B>** .IGNORE</B> = Any character appearing in the .IGNORE quotes are ignored by the .SCANLINE command. Note - when a character is .IGNORED, it is ignored throughout the ENTIRE aperture file.</P>
+
+<P><B>** .WORDDELIMITER</B> = Any character appearing in the .WORDDELIMITER quotes will act as a separator between words. Note - when a character is a delimiter, it is a delimiter throughout the entire aperture file. The delimiter is case sensitive. A blank space <I>must always</I> be present in the .WORDDELIMITER line.</P>
+
+<P><B>** .FORM_xxx</B> = The CAMCAD command for that aperture shape. .FORM_ROUND, .FORM_SQUARE, .FORM_RECT, .FORM_THERM are the most common shapes. The .FORM_xxx command is always followed by a space and the aperture file name for the same aperture shape.</P>
+
+<P><B>** .SCANLINE</B> = The macro file command to scan the aperture file line by line. This command is always followed by a series of other commands that match the sequence of data in the aperture file. When the Aperture Smart Reader scans the aperture list, it will scan a line and then compare it to the .SCANLINE command definitions found in each of the .STARTDEFs until it finds a match between the commands in the .SCANLINE and the information in the aperture list. The .SCANLINE acts as a template.</P>
+
+<P><B>** .SKIPWORD</B> = Issued in the .SCANLINE command, the .SKIPWORD command will ignore the corresponding word in the aperture file line.</P>
+
+<P><B>**</B> For further references to the macro file commands, please open the file default.mac in any text editor and review the contents.</P>
+
+</BODY>
+</HTML>
